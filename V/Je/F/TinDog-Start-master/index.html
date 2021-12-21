@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TinDog</title>
+  <!--betütipus-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+  <!--betütipus-->
+  <!--fül-->
+  <link rel="shortcut icon" href="images/dog.png">
+  <!--fül-->
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!--bootstrap-->
+  <!--css-->
+  <!--A CSS-nek fontos, hogy itt a helye mert így feljebb van és felülírja a boostrap-et-->
+  <link rel="stylesheet" href="css/styles.css">
+  <!--css-->
+  <!--ikonok------------------------------------>
+  <script src="https://kit.fontawesome.com/884f47de58.js" crossorigin="anonymous"></script>
+  <!--ikonok------------------------------------>
+
+</head>
+
+<body>
+
+  <section class="szinessz" id="title">
+    <!--section rész daraboláshoz-->
+    <div class="padding315">
+      <!--contener-->
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!--hambi menü-->
+        <!--brend szöveg-->
+        <a class="navbar-brand" href="#">tinDog</a>
+        <!--brend szöveg-->
+        <!--ha a kódban a hambi fölé teszem akkor jobb old ha lentebb akkor balo-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--hambi menü-->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <!--<div class="collapse navbar-collapse" id="navbarTogglerDemo02">HIBÁS ID-->
+          <!--bg background navbar-navgiációs sáv navbar-expand-változzon-md-medium méretnélabe-->
+        <!--ml-auto balra zárja a szöveget-->
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Előnyök</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Vélemények</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Árak</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="#cta">Letöltés</a>
+
+            </li>
+            <!--lenyitható-->
+            <li class="nav-item dropdown ">
+              <!--class="disabled" szedd ki és működni fog-->
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Más oldalaim
+              </a>
+              <!--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Más oldalaim
+            </a>-->
+              <!--class="dropdown-menu-dark"-->
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../../../index.html">Home</a>
+
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="https://somogyiti2.github.io/First_step_Wikia/">Github</a></li>
+              </ul>
+            </li>
+            <!--lenyitható-->
+          </ul>
+        </div>
+      </nav>
+      <!-- Nav Bar -->
+
+      <!-- Title -->
+      <!--egy sorban legyen (row) -->
+      <div class="row">
+        <!--fenti kontant-->
+        <!--6 egységet ad neki-->
+        <div class="col-lg-6 ">
+          <h1 class="big-heding ">Ismerkedjen meg új és érdekes kutyákkal a közelben.</h1>
+          <button type="button" class="btn btn-dark Downloadbt"><i class="fab fa-apple"></i> Letöltés</button>
+          <button type="button" class="btn btn-outline-light Downloadbt"><i class="fab fa-google-play"></i> Letöltés</button>
+        </div>
+        <div>
+          <img class="dphone dphoe-z" src="images/iphone6.png" alt="iphone-mockup">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section  class="fehersz" id="features">
+    <div class="row">
+      <div class="feature-box col-lg-4 ">
+        <!--ikon-->
+        <i class="fas fa-heart fa-4x ikon"></i>
+        <!--fas=fan alsom simbol fa-hear fa-ból szív fa-4x kinagyitja az szimbólumot
+      ikon=saját csoport -->
+        <!--ikon-->
+        <h3>Egyszerű használat</h3>
+        <p>Annyira könnyen használható, hogy még a kutyája is meg tudja csinálni.</p>
+      </div>
+      <div class="feature-box col-lg-4">
+        <!--ikon-->
+        <i class="fas fa-bullseye fa-4x ikon"></i>
+        <!--ikon-->
+        <h3>Elit ügyfélkör</h3>
+        <p>Minden kutyánk megvan, a legnagyobb kutyánk.</p>
+      </div>
+
+      <div class="feature-box col-lg-4 ">
+        <!--ikon-->
+        <i class="fas fa-check-circle fa-4x ikon"></i>
+        <!--ikon-->
+        <h3>Garantáltan működik.</h3>
+        <p>Találja meg kutyája életének szerelmét, vagy adja vissza pénzét.</p>
+      </div>
+    </div>
+    <!--row-->
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section class="szinessz" id="testimonials">
+    <!--class="carousel slide"-slide csak megy nem csúszik; data-ride="carousel"->data-ride="false" csak akkor megy ha kattintok vagy leütök egy gombot-->
+    <div id="testimornial-carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover">
+      <!--data-interval="1000"=hány miliszekundoménként váltson; data-pause="hover"=megáll ha rajta van az egér-->
+      <!--FONTOS testimornial-carousel-kell ide behelyezni, hogy működjön a gomb-->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2 class="price-text">Többé nem kell más kutyákat szagolnom a szerelemért. Megtaláltam a legmenőbb corgit a TinDog-on. Szövet.</h2>
+          <img class="testimonials-img" src="images/dog-img.jpg" alt="dog-profile">
+          <em>Pebbles, New York</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text price-text">A kutyám nagyon magányos volt, de TinDog segítségével megtalálták életük szerelmét. Gondolom.</h2>
+          <img class="testimonials-img" src="images/lady-img.jpg" alt="lady-profile">
+          <em>Beverly, Illinois</em>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#testimornial-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#testimornial-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  <!-- Press -->
+  <section id="press">
+    <img class="press-logo" src="images/TechCrunch.png" alt="tc-logo">
+    <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+  </section>
+
+  <!-- Pricing -->
+
+  <section class="fehersz" id="pricing">
+    <h2 class="price-text">Terv minden kutya igényeihez.</h2>
+    <p>Egyszerű és megfizethető ártervek Önnek és kutyájának.</p>
+    <div class="row">
+      <!--<div class="card-deck "><!-card-deck=pakli mb-->
+      <div class="parna-col col-lg-4 col-md-6 col-sm-6 ">
+        <div class="card">
+          <div class="card-header">
+            <h3>Chihuahua</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">Ingyen</h2>
+            <p>5 mérkőzés naponta</p>
+            <p>10 üzenet naponta</p>
+            <p>Korlátlan alkalmazáshasználat</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn bt-lg btn-block btn-outline-dark" type="button">Sign Up</button>
+            <!--btn gomb stílust megkapja de kell, bt-lg mérete legyen lg-nél btn-block kártya teljes szélességét elfoglalja btn-outline milyen stílusa legyen a gombnak
+          ha kivesszük az "outline"-t akkor rendes gomb lesz. (nem lyukasztott)-->
+          </div>
+        </div>
+      </div>
+      <div class="parna-col col-lg-4 col-md-6 col-sm-6 ">
+        <div class="card">
+          <div class="card-header">
+            <h3>Labrador</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$49 / hó</h2>
+            <p>Korlátlan Meccsek</p>
+             <p>Korlátlan Levelezés</p>
+             <p>Korlátlan alkalmazáshasználat</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn bt-lg btn-block btn-dark" type="button">Regisztrálj</button>
+            <!--btn gomb stílust megkapja de kell, bt-lg mérete legyen lg-nél btn-block kártya teljes szélességét elfoglalja btn-outline milyen stílusa legyen a gombnak
+          ha kivesszük az "outline"-t akkor rendes gomb lesz. (nem lyukasztott)-->
+          </div>
+        </div>
+      </div>
+
+      <div class="parna-col col-lg-4 col-md-12 col-sm-6 ">
+        <div class="card">
+          <div class="card-header">
+            <h3>Mastiff</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$99 / hó</h2>
+            <p>Kiemelt lista</p>
+            <p>Korlátlan Meccsek</p>
+            <p>Korlátlan Levelezés</p>
+            <p>Korlátlan alkalmazáshasználat</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn bt-lg btn-block btn-dark" type="button">Regisztrálj</button>
+            <!--btn gomb stílust megkapja de kell, bt-lg mérete legyen lg-nél btn-block kártya teljes szélességét elfoglalja btn-outline milyen stílusa legyen a gombnak
+          ha kivesszük az "outline"-t akkor rendes gomb lesz. (nem lyukasztott)-->
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  </div>
+
+  <!-- Call to Action -->
+
+  <section class="szinessz"id="cta" class="padding315">
+    <div style="margin-bottom: 0px;">
+      <h3 class="big-heding">Találja meg kutyája életének igazi szerelmét még ma.</h3>
+      <button type="button" class="btn btn-dark Downloadbt"><i class="fab fa-apple"></i> Letöltés</button>
+      <button type="button" class="btn btn-outline-light Downloadbt"><i class="fab fa-google-play"></i> Letöltés</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="feher" id="footer" style="margin-bottom: 0px;">
+    <a href="https://www.facebook.com/tibibacsi97"><i class="sicon fab fa-facebook fa-2x"></i></a>
+    <a href="https://www.linkedin.com/in/somogyi-tibor-linkdin/"><i class="sicon fab fa-linkedin fa-2x"></i></a>
+    <a href="https://github.com/somogyiTi2"><i class="sicon fab fa-github fa-2x"></i></a>
+    <p>© Somogyi Tibor 2021</p>
+  </footer>
+
+</body>
+
+</html>

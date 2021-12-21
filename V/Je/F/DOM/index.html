@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DOM</title>
+  <link rel="stylesheet" href="style.css">
+  <!--A CSS-t máshova is el lehetne helyzeni, azonban sokkalta késöbb töltene be
+  maga az egész ezzel rombolva az élmény...-->
+</head>
+<body>
+  <a href="../../../index.html">vissza</a>
+  <a href="jegyzetek.html">első vázlat</a>
+  <!-- onload="alert('Hello');"> NEM PRAKTIKUS
+<!--(onload="" )így tudok a testen eblül JS-helyzeni -->
+<!--'' idézőjelet kell hasznánlnk mivel összezavarodna a htmlünk
+mive ő "" dolgozik.-->
+
+<h1 id="title">Hello</h1>
+<!--belső JS-->
+<!--<script type="text/javascript">
+  alert("Hello");
+</script>-->
+<!-- JS külső file beépítése-->
+<script src="index.js" charset="utf-8"></script>
+
+<!-- Azért kerük késöbbre a JS mert megváltoztatunk vele egy elemet.
+    Azonban ez ha nem létezik még akkor elbukik a kód-->
+<!--fent nem műkdöne pl ez a program sor mivel csak magán a kijelzőn keresi
+  a "h1"-et és így nem tudja értelmezni
+  document/*dokumentban*/.querySelector("h1")/*rákeres a h1-re*/
+  .innerHTML = "Good By";/*megváltoztatja a HTML kódot majd kicseréli*/
+-->
+<input type="checkbox" id="checkbox1">
+<!--checkbok tesztelése document.querySelector("input").click();-->
+<button class="btn" style=":Active:color:red;">Katti ide</button>
+<!--kihívás: szinezd JS használattal csak ennek a gombnak a háttérét sárgára...
+document.lastElementChild.lastElementChild.querySelector("button").style.backgroundColor="yellow";
+-->
+
+
+<!--Futtasd le így tudom még egy osztályhoz hozzáadni magát a buttonoket...
+document.querySelector("button").classList.add("Helloosztaly"); -->
+<!--így ki is vehetem az osztálybólabel
+document.querySelector("button").classList.remove("Helloosztaly");-->
+<!--ez mind azért hasznos mert ha CSS-ben pl írok egy láthatatlanító osztályt akkor ha
+dibbugolok akkor pl ha belerakom eltünik ha kiveszem látszik...-->
+<!--document.querySelector("button").classList.toggle("Helloosztaly");
+ezzel pedig osztály váltást hozok létre, ha aktiválva van akkor kikapcsolja ha ki van kapcsolva
+akkor pedig bekapcsolja-->
+
+<ul id="list">
+  <li class="item"><a href="Google.com">Google</a></li>
+  <!--link kiválasztása: document.querySelector("li a"); space kell a két ellem közé...-->
+  <!--document.querySelector("a");EBBEN AZ ESETBEN AZ ELSŐ LINKET VÁLASSZA KI-->
+  <!--document.querySelector("li.item");-->
+  <!--document.querySelectorAll("#list .item");-->
+  <!--így változtathatom meg a link teratalmát
+  document.querySelector("li a").setAttribute("href"/*ezzel azt manipulálom amit meg akarok változtatni*/,"https://www.bing.com"/*itt pedig meghatázozom mire*/);-->
+  <li class="item">Kettő</li>
+  <li class="item">Három</li>
+</ul>
+<!--Kilistázza: document.lastElementChild.lastElementChild.getElementsByTagName("li");-->
+<!-- Röviden: document.getElementsByTagName("li")-->
+<!--mivel tömböl elemet jelölünk ki ezért szükségünk van a [] jelre
+document.lastElementChild.lastElementChild.getElementsByTagName("li")[2].style.color="purple";
+-->
+<!--egész osztályok kijelölésére: document.getElementsByClassName-->
+<!--de van még document.getElementById is
+ezt manipulálhatom is pl: document.getElementById("title").innerHTML="Well done";-->
+
+</body>
+</html>
+<!--Ha a Chromba bemegyük és a Console-ba beírjuk, hogy document
+akkor az egész HTML kódhoz hozzáférhetünk. Magával a <!DOCTYPE html> kifejezéssel
+
+Ha azt írjuk be, hogy document.firstElementChild
+akkor a CSAK a HTML kapjuk meg.
+
+Ha beírjuk, hogy document.firstElementChild.firstElementChild
+Akkor Dokument HTML gyerekének gyerekét azaz a Headhoz férünk hozzá.
+
+De ezt mind szépen láthatjuk a fa struktúrában.
+
+Ezt elmenhetem egy változó ként...
+var heading=document.firstElementChild.firstElementChild;
+
+heding.innerHTML="valami";
+ -->

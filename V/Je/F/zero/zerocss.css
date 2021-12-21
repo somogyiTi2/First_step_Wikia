@@ -1,0 +1,109 @@
+div {
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='43.5' height='43.5' patternTransform='scale(3) rotate(65)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(174,51.8%,43.1%,1)'/><path d='M11 6a5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5 5 5 0 015 5' transform='translate(1.75,0)' stroke-width='1' stroke='none' fill='hsla(174,37.9%,51.4%,1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  border-style: solid;
+  border-width: 10px;
+  border-width: 0px 10px 20px 30px;
+  /*keret vastagsága: 1.felső 2.jobb 3. alul 4.bal*/
+  padding: 20px;
+  /*szöveg és szél közötti különbség*/
+}
+
+/*kigenerált SVG*/
+body {
+  background-color: gold;
+  background-image: linear-gradient(to left, rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+    url("https://thypix.com/wp-content/uploads/2021/02/pixel-sunglasses-17-700x407.png");
+  /*background-image: url(https://media.istockphoto.com/photos/background-of-galaxy-and-stars-picture-id1035676256?b=1&k=20&m=1035676256&s=170667a&w=0&h=NOtiiFfDhhUhZgQ4wZmHPXxHvt3RFVD-lTmnWCeyIG4=);}*/
+  /* háttér*/
+}
+/*kong projekt*//*kong és a város lebeg az oldal felett és ha kongra kattintasz elkapja a várost*/
+.test{
+  position: fixed;
+  right: 10%;
+}
+
+.test:active{
+  position: fixed;
+  right: 50%;
+  background-color:inherit;
+}
+/*kong projekt*/
+.div2 {
+  border-width: 10px;
+}
+
+.div3 {
+  border-width: 0px;
+  height: 200px;/*ellentétes irányba megy*/
+}
+
+.img2 {
+  position: relative;
+  bottom: 20px;
+  left: 30px;
+}
+
+.img3 {
+  position: fixed;
+  right: 50%;
+  /*flixed poziciónál*/
+  /* fixen valami a képernyőn (közepén van)*/
+  /*right:30px;*/
+}
+
+.img {
+  position: relative;
+  width: 20%;
+}
+
+/*minden kép ekkora helyet foglal*/
+/****************************************************tag******************************/
+h1 {
+  color: red;
+  font-size: 50px;
+}
+
+img {
+  width: 100px;
+}
+
+img:hover {
+  background-color: gold;
+}
+
+img:active {
+  background-color: black;
+}
+
+p {
+  font-size: 10px;
+}
+
+/*****************************************szelekciós******************************/
+/*class*/
+.egy {
+  background-color: green;
+}
+
+.ketto {
+  background-color: red;
+}
+
+.lilla {
+  color: purple;
+  font-size: 40px;
+}
+
+/*Több osztályba is tartozhat egy elem pl: a másik kép nevezetű kép most a "ezis"
+osztályt is megkapja*/
+.ezis {
+  border-radius: 100%
+}
+
+/************************************ID szelekció************************************/
+/*ID*/
+#proba {
+  color: blue;
+}
+
+/*AZ ID EGY HELYET AZONOSÍT NEM LEHET TÖBBET HASZNÁLNI*/

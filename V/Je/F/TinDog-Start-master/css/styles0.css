@@ -1,0 +1,196 @@
+/*
+@media print /*sceern*//*speech*//*{
+csak akkor fut le ez a rész ha nyomtatási nézetben van...
+}
+/*Általános***/
+body {
+  font-family: 'Montserrat-black', sans-serif;
+  margin-bottom:inherit;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/*Általános***/
+/*title***/
+#title {
+  background-color: #fe4161;
+  /*felső háttérszín*/
+  color: #fff;
+  /*h1 kód színe a title-ben a fff=fehér*/
+}
+
+.container-fluid {
+  /*title alatti div*/
+  padding: 3% 15%;
+  /*mi a padding??*/
+}
+
+/*Navigation Bar**/
+.navbar {
+  padding: 0px 0px 4.5rem;
+  /*bal és jobb oldal 0 csak fent és lent 4.5*/
+}
+
+.nav-item {
+  padding: 18px;
+}
+
+.nav-link {
+  font-family: 'Montserrat-light', sans-serif;
+  font-size: 1.5rem;
+}
+
+.dropdown-item {
+  font-family: 'Montserrat-light', sans-serif;
+  font-size: 1.2rem;
+}
+
+.navbar-brand {
+  font-family: 'Montserrat-black', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  /*bold=bárot (nagy)*/
+}
+
+/*Navigation Bar**/
+/*Download Buttons**/
+.Downloadbt {
+  margin: 5% 3% 5% 0%;
+}
+
+/*Download Buttons**/
+/*Navigation Bar**/
+/*Title kép **/
+.dphone {
+  width:60%;
+  transform: rotate(25deg);
+  margin-bottom: -40%;
+}
+@media (max-width:1099px){
+#title{
+  text-align: center;
+}
+  .dphone {
+    transform: rotate(0);
+  }
+}
+/*.dphoe-z{
+  position:absolute;
+  right:30%;
+
+
+}*/
+
+/*Title kép**/
+/*title***/
+/*features***/
+#features {
+  padding: 7% 15%;  /*fent lent 7%, 15% balra jobbra*/
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 5%;
+}
+
+.ikon {
+  color: #ee7467;
+  margin-bottom: 1rem;
+}
+
+.ikon:hover {
+  color: #fe4161;
+}
+
+/*Features ***/
+/*Testimonials***/
+#testimonials {
+  text-align: center;
+  background-color: #ee7467;
+  color: #fff;
+}
+
+.testimonials-img {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/*Testimonials***/
+#press {
+  background-color: #ee7467;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/*képnézegető gomb kijebb legyen*/
+.carousel-item {
+  padding: 7% 15%;
+}
+/*pricing***/
+#pricing{
+  text-align: center;
+  padding: 100px;
+}
+.parna-col{
+  padding: 3% 2%; /*3fel le 2 jobb bal*/
+}
+/*pricing***/
+/*cta***/
+#cta{
+  font-family: 'Montserrat-black', sans-serif;
+  background-color:#fc2c5c;
+  color:white;
+  padding: 7% 15%;
+  text-align: center;
+}
+.cta-heding{
+  font-size: 3.5rem;
+  line-height: 1.5rem;
+}
+
+
+/*cta***/
+/*footer***/
+#footer{
+  /*padding: 7% 15%;*/
+  text-align: center;
+  background-color: #000;
+  margin-top:0px;
+}
+.sicon{
+  margin:20px 10px;
+}
+
+
+/*footer***/
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/

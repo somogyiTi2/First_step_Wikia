@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Backend Számológépes feladat</title>
+  <link rel="stylesheet" href="../Je.css">
+</head>
+<body>
+  <a href="../../index.html">Vissza</a>
+  <h1>API</h1>
+  <h2>Lényegében egy másik alkalmazás (amely nem feltétlenül a localis szerveren létezik), egy lekérdező interface-e (eszköze, felülete).</h2>
+  <h3>(közveteln réteg hozzáférése bizotsított)</h3>
+  <h6>Az API az angol „application programming interface” kifejezés rövidítése, ami magyarul „alkalmazásprogramozási felületet” jelent.</h6>
+<p><p>
+  <div>
+    Ezen az oldalon van pár API
+    <p><a href="https://openweathermap.org/api">https://openweathermap.org/api</a></p>
+    <p>A postman alkalmazás pedig segít összerakni paramétereket.</p>
+     (Van egy offline része és egy Online része is a programnak )
+    <p><a href="https://grey-meteor-104502.postman.co/workspace/My-Workspace">https://grey-meteor-104502.postman.co/workspace/My-Workspace</a></p>
+    <p>Ha az oldalba akarod építeni magát az API-t akkor ezt elsőnek deffiniálni kell.(azonban nem kell telepíteni a none miatt</p>
+    <p class="js">const https= require("https");</p>
+    <p>Illetve itt constans értékként is ledeffiniáltuk.(magán az app.get-en belül).</p>
+    <p class="js">const url="https://api.openweathermap.org/data/2.5/weather?q=London&appid=f44f0bb7584b486f840deda4ab600ca9&units=metric";</p>
+    <p>És szintén egy gettel meghívtam, és azokat paraméterként megadtam az elöbb deffiniált változót </p>
+    <p>https.get(url, function(response){
+      console.log(response);
+      }</p>
+      <p>itt minden ok ha kiírja, hogy </p>
+      <p class="h">statusMessage: 'OK',</p>
+  </div>
+  <div>
+  <p class="js">  Hibakódok:
+    console.log(response.statusCode);</p>
+  <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"></a>Az összes</p>
+  <p>200 minden COOL</p>
+  <p>404 nem található az oldal</p>
+  <p>401 hibás a változó</p>
+  </div>
+  <div>
+    <p>ha" < form>-ban akarok küldeni trigger üzenetet a szervernek akkor fel kell tennem a body-parser-t</p>
+    <p class="h">npm i body-parser</p>
+  </div>
+
+</body>
+</html>

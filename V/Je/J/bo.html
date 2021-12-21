@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--fülkép-->
+  <link rel="shortcut icon" href="img/ful.ico">
+  <!--integráció bootsrtap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!--integráció bootsrtap-->
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #771499;
+    }
+
+    /*slider-Testimonials***/
+    .carousel-item {
+      height: 100px;
+    }
+
+    /*slider-Testimonials****/
+    /*z-index***/
+    .ab {
+      position: absolute;
+    }
+
+    .red {
+      /*nem ememeletek vannak, hanem +-1 el működik*/
+      z-index: 2;
+      /*0*/
+    }
+
+    .yellow {
+      /*nem ememeletek vannak, hanem +-1 el működik*/
+      left: 20px;
+      top: 150px;
+      z-index: -1;
+      /*-1 emelet*/
+    }
+
+    .blue {
+      /*nem ememeletek vannak, hanem +-1 el működik*/
+      left: 40px;
+      top: 150px;
+    }
+    /*z-index****/
+  </style>
+</head>
+
+<body>
+  <!---menü---------------------------------------------------------------->
+  <!--HA GÉPEN NÉZED EGYMÁS MELLET HA MOBILON EGYMÁS ALATT-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="z-index:0;">
+    <!--hambi menü-->
+    <!--brend szöveg-->
+    <a class="navbar-brand" href="../../../index.html">T12</a>
+    <!--brend szöveg-->
+    <!--ha a kódban a hambi fölé teszem akkor jobb old ha lentebb akkor balo-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--hambi menü-->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <!--<div class="collapse navbar-collapse" id="navbarTogglerDemo02">HIBÁS ID-->
+      <!--bg background navbar-navgiációs sáv navbar-expand-változzon-md-medium méretnélabe-->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Más oldalaim
+          </a>
+          <!--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Más oldalaim
+          </a>-->
+          <!--class="dropdown-menu-dark"-->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../../index.html">vissza</a>
+            <a class="dropdown-item" href="../../../CV weboldal kísérlet 1/index.html">Cv1</a>
+            <a class="dropdown-item" href="../../../css-CV2/index.html">CV2</a>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="https://somogyiti2.github.io/First_step_Wikia/">Github</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../F/TinDog-Start-master/index.html">Kutyatinder</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled " href="#">bo</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+  <!---menü---------------------------------------------------------------->
+
+  <!--bootstrap gomb--------------------------------------------------------->
+  <button type="button" class="btn btn-outline-danger">ÁTLÁTSZÓ GOMB</button>
+  <button class="btn btn-success">Sima Gomb</button>
+  <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/"><button class="btn btn-primary"> Bottstrap Gombok</button></a>
+  <!--bootstrap gomb--------------------------------------------------------->
+  <!--Z-INDEX-------------------------------------------------------------------------------->
+  <div style="height:300px; width:auto;">
+    <div class="red ab" style="background-color: red; height: 100px; width:100px; border:1px solid;">
+      Piros
+    </div>
+    <div class="yellow ab" style="background-color: yellow; height: 100px; width:100px; border:1px solid;">
+      Sárga
+    </div>
+    <div class="blue ab" style="background-color: blue; height: 100px; width:100px; border:1px solid;">
+      Kék
+    </div>
+  </div>
+  <!--Z-INDEX---------------------------------------------------------------------------------->
+  <!--Layout/Grid row=sor-------------------------------------------------------------------->
+  <!--ezek csak % osszák és összenyomják -->
+  <div class="row">
+    <div class="col" style="background-color:red; border:1px solid;">
+      Col
+    </div>
+    <div class="col" style="background-color:red; border:1px solid;">
+      Col
+    </div>
+    <div class="col" style="background-color:red; border:1px solid;">
+      Col
+    </div>
+    <div class="col" style="background-color:red; border:1px solid;">
+      Col
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6" style="background-color:green; border:1px solid;">
+      col-6
+    </div>
+    <div class="col-6" style="background-color:yellow; border:1px solid;">
+      col-6
+    </div>
+    <div class="col-2" style="background-color:green; border:1px solid;">
+      col-2
+    </div>
+    <div class="col-1" style="background-color:red; border:1px solid;">
+      col-1
+    </div>
+  </div>
+  <!--ezek csak % osszák és összenyomják -->
+  <!--12 egy egész-->
+  <!--ez reszponzív-->
+  <div class="row">
+    <div class="col-md-6" style="background-color:blue; border:1px solid;">
+      col-6
+    </div>
+    <div class="col-md-6" style="background-color:blue; border:1px solid;">
+      col-6
+    </div>
+    <div class="col-md-6" style="background-color:blue; border:1px solid;">
+      col-6
+    </div>
+    <div class="col-md-6" style="background-color:blue; border:1px solid;">
+      col-6
+    </div>
+  </div>
+  <!--ez reszponzív-->
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:green; border:1px solid;">
+      col-lg-3 col-md-4 col-sm-6
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:green; border:1px solid;">
+      col-lg-3 col-md-4 col-sm-6
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:green; border:1px solid;">
+      col-lg-3 col-md-4 col-sm-6
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:green; border:1px solid;">
+      col-lg-3 col-md-4 col-sm-6
+    </div>
+    <!--ha lg akkor 3 helyet foglal ha md akkor 4-et ha sm akkor 6 ot...-->
+    <div class="container">
+      <p> kihívás
+        <p />
+      <p> ha teljes képenyő akkor 6 ha tablet 4+2 ha mobl akkor full screen/teljes</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green; border:1px solid;">
+        lg-12/6=2 md-12/4=3 sm-12/12=1
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green; border:1px solid;">
+        lg-12/6=2 md-12/4=3 sm-12/12=1
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green; border:1px solid;">
+        lg-12/6=2 md-12/4=3 sm-12/12=1
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green; border:1px solid;">
+        lg-12/6=2 md-12/4=3 sm-12/12=1
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green; border:1px solid;">
+        lg-12/6=2 md-12/4=3 sm-12/12=1
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green; border:1px solid;">
+        lg-12/6=2 md-12/4=3 sm-12/12=1
+      </div>
+    </div>
+    <!--row=sor-------------------------------------------------------------------->
+    <!--conter------------------------------------------------------------------------------------------------------------>
+    <div class="container" style="background-color:red;">
+      container Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+      sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="container-fluid" style="background-color:yellow;">
+      container-fluid Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+      sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <!--conter------------------------------------------------------------------------------------------------------------>
+    <!--slider-Testimonials----------------------------------------------------------------------------------------------->
+    <section="slider-Testimonials">
+
+
+
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="1000" data-pause="hover">
+        <!--data-interval="1000"=hány miliszekundoménként váltson; data-pause="hover"=megáll ha rajta van az egér-->
+        <div class="carousel-inner">
+          <!--csúszat items elhelyzeő-->
+          <div class="carousel-item active" style="background-color:blue;">
+            <img class="d-block w-100" src="..." alt="First slide">
+          </div>
+          <div class="carousel-item" style="background-color:yellow;">
+            <img class="d-block w-100" src="..." alt="Second slide">
+          </div>
+          <div class="carousel-item" style="background-color:black;">
+            <img class="d-block w-100" src="..." alt="Third slide">
+          </div>
+        </div>
+      </div>
+      <p>
+
+        <!--class="carousel slide"-slide csak megy nem csúszik; data-ride="carousel"->data-ride="false" csak akkor megy ha kattintok vagy leütök egy gombot-->
+      <div id="testimornial-carousel" class="carousel" data-ride="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-color:blue;">
+            <img class="d-block w-100" src="..." alt="First slide">
+          </div>
+          <div class="carousel-item" style="background-color:yellow;">
+            <img class="d-block w-100" src="..." alt="Second slide">
+          </div>
+          <div class="carousel-item" style="background-color:black;">
+            <img class="d-block w-100" src="..." alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#testimornial-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#testimornial-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+      </section>
+      <!--slider-Testimonials----------------------------------------------------------------------------------------------->
+      <!--kártya------------------------------------------------------------------------------------------------------------>
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-danger">Sign up for free</button>
+            <!--btn-outline-dark=gomb stílusa -->
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li></li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          Kártya fej
+        </div>
+        <div class="card-body">
+          Kártya body
+        </div>
+        <div class="card-footer">
+          Kártya láb
+        </div>
+      </div>
+      <!--kártya------------------------------------------------------------------------------------------------------------>
+</body>
+
+</html>
