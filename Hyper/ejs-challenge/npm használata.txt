@@ -1,0 +1,3 @@
+Ha kívülről töltöm le a projekt alapjit akkor lényegében be kell írnom,
+a hyperbe hogy "npm install" és ami le
+van írva az initben azt fel is telepíti...
