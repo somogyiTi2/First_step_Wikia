@@ -1,0 +1,80 @@
+srobi@DESKTOP-N2QPU0M MINGW64 /d/Mobilrack/JUSTDOIT/Udemi/Hyper/newsletter_Signup   
+$ touch app.js
+
+srobi@DESKTOP-N2QPU0M MINGW64 /d/Mobilrack/JUSTDOIT/Udemi/Hyper/newsletter_Signup
+$ touch singup.html success.html failure.html
+
+srobi@DESKTOP-N2QPU0M MINGW64 /d/Mobilrack/JUSTDOIT/Udemi/Hyper/newsletter_Signup
+$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (newsletter_signup)
+version: (1.0.0)
+description:
+entry point: (app.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to D:\Mobilrack\JUSTDOIT\Udemi\Hyper\newsletter_Signup\package.json:
+
+{
+  "name": "newsletter_signup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes)
+
+srobi@DESKTOP-N2QPU0M MINGW64 /d/Mobilrack/JUSTDOIT/Udemi/Hyper/newsletter_Signup
+$ npm i body-parser
+
+added 22 packages, and audited 23 packages in 20s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+srobi@DESKTOP-N2QPU0M MINGW64 /d/Mobilrack/JUSTDOIT/Udemi/Hyper/newsletter_Signup   
+$
+
+srobi@DESKTOP-N2QPU0M MINGW64 /d/Mobilrack/JUSTDOIT/Udemi/Hyper/newsletter_Signup   
+$ npm i express
+
+added 39 packages, and audited 62 packages in 1s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+srobi@DESKTOP-N2QPU0M MINGW64 /d/Mobilrack/JUSTDOIT/Udemi/Hyper/newsletter_Signup   
+$ npm i request
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported        
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+
+added 43 packages, and audited 105 packages in 4s
+
+2 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
