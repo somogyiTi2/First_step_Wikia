@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../Je.css">
+  <title>sql</title>
+</head>
+<body>
+  <a href="../../index.html">Vissza</a>
+  <h1>Create table</h1>
+  <p>Tábla aloktás <em class="sql">CREATE TABLE table_name (column1 datatype, column2 datatype, column3 datatype,....);</em></p>
+  <p><em class="sql">id int</em> int 4 bájtos formátum</p>
+  <p>Fontos, hogy csak space van miden között...</p>
+  <p class=fogalom>Primary key= elsődleges kulcs</p>
+  <p class=fogalom>foreign key=külső kulcs (Amire mutat?)</p>
+  <p>végére kell írni melyik az elsődleges kulcs <em class=sql>PRIMARY KEY (ID)</em></p>
+  <p class=sql>CREATE TABLE products (
+    id int not NULL,
+    name STRING,
+    price MONEY,
+    PRIMARY KEY (ID)</p>
+    <hr>
+    <h1>Adatok hozzáadása</h1>
+    <p>2 lehetőség van:</p>
+    <p>1. itt meg kell adni minden felül minden tulajdonság és alul értékek</p>
+    <p class="sql">INSERT INTO table_name (column1, column2, column3, ...)
+        VALUES (value1, value2, value3, ...);</p>
+    <p>2. lehetőség: itt sorredbe csak az adatokat kell megadni</p>
+    <p class="sql">INSERT INTO table_name
+        VALUES (value1, value2, value3, ...);</p>
+    <p>Példa:</p>
+    <p class=sql>INSERT INTO products
+            VALUES (1, "Pen", 1.20);</p>
+    <hr>
+  <h1>Adattípusok</h1>
+  <a href="https://www.w3schools.com/sql/sql_datatypes.asp">https://www.w3schools.com/sql/sql_datatypes.asp</a>
+  <hr>
+  <h1>Adat frissítés (update)</h1>
+  <p class=sql>UPDATE table_name /*tábla neve*/
+        SET column1 = value1,/*mit mire változtatok ha több akkor , és utánna*/ column2 = value2, ...
+        WHERE condition;/*ha nincs where mindent arra változtat de ha van akkor azt kell megmondani hol*/</p>
+  <p>Példa:</p>
+  <p class=sql>
+    UPDATE products
+    SET price = 0.80
+    WHERE id=2;</p>
+    <p>Új oszlop hozzáadása:</p>
+    <p class="sql">ALTER TABLE table_name
+      ADD column_name datatype;</p>
+    <p>Példa:</p>
+    <p class="sql">ALTER TABLE products
+      ADD stock INT</p>
+    <hr>
+    <h1>DELETE (törlés)</h1>
+    <p class=sql>DELETE FROM table_name WHERE condition;</p>
+    <p>Az egész sort törli:</p>
+    <p class=sql>DELETE FROM table_name WHERE condition;</p>
+    <p>!ha nincs where akkor mindent töröl!</p>
+    <hr>
+    <h1>Külső kulcs kapcsolat</h1>
+    <p>új tábla alkotással</p>
+    <p class=sql>
+      CREATE TABLE orders (
+      id int not NULL,
+      order_number int,
+      customer_id INT,
+       procut_id int,
+      PRIMARY KEY (ID),
+        /*külső kulcs (amire mutat) REFERENCES táblaneve(tulajdonság),*/
+       foreign key (customer_id) REFERENCES customers(id),
+       foreign key (procut_id ) REFERENCES procucts(id)
+      )</p>
+  <p class="fogalom">INNER JOIN =mind 2 táblában megegyznek</p>
+  <p class=sql>SELECT column_name(s)
+    FROM table1
+    INNER JOIN table2
+    ON table1.column_name = table2.column_name;</p>
+    <hr>
+    <p class=sql>
+      CREATE TABLE orders (
+    id INT NOT NULL,
+    order_number INT,
+    customer_id INT,
+     procut_id INT,
+    PRIMARY KE
+    </p>
+</body>
