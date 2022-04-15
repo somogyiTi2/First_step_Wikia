@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../Je.css">
+  <title>Todolist des</title>
+</head>
+<body>
+  <a href="../../index.html">Vissza</a>
+  <p>Fel kell telepíteni az ejs-t </p>
+  <p class="h">npm i ejs</p>
+  <p>Az ejs egy olyan file amely egy kinézetet foga adni magának az oldalnak.</p>
+  <p>be kell importálni a <em>app.js</em> be a feltelepített filet</p>
+  <p class="js">app.set('view engine','ejs');/*Itt Adzsela valamiért elcserélte de nekem csak "set"-el megy USE-ra cserélte.*/</p>
+  <p>fontos, hogy use-t használjunk mivel már mást használunk alapértelmeznek</p>
+  <p>A kód FELTÉTELEZI HOGY LÉTEZIK EGY INDEX EJS FÁJL</p>
+  <p>Így létrekell hozni egy mappát.</p>
+  <p>és alkossunk egy <em>list.ejs</em> nevű filet.</p>
+  <p><em>Itt HTML kódot lehet írni</em></p>
+  <p class="html">Ez a jelölője paraméterei"<%= %>"</p>
+  <hr>
+  <p class="jegyzet">Kihívás mondja meg az oldalad milyen nap van.</p>
+  <p class="html">Ma <%=hkscpzv %>van</p>
+  <p class="js">var hv="";
+  switch (hetnap){
+    case 0:
+    hv="vasárnap";
+    break;
+    case 1:
+    hv="hétfő";
+    break;
+    case 2:
+    hv="kedd";
+    break;
+    case 3:
+    hv="szerda";
+    break;
+    case 4:
+    hv="csütörtök";
+    break;
+    case 5:
+    hv="péntek";
+    break;
+    case 6:
+    hv="szombat";
+    break;
+    defult:hv="Sohanapja kis kedd"
+
+  }</p>
+  <p>HOZZÁÍRNI <em>,</em>vel a változó itteni és ottani verzióját.</p>
+  <p class="js">res.render("list",{vminap: nap, hkscpzv: hv});</p>
+<hr>
+<p>kell csinálni egy publick mappát amibe kell csinálni egy css filt, hogy majd így elérjem...</p>
+<p>HTML:</p>
+<p class="html">  < link rel="stylesheet" href="css/styles.css"></p>
+<p class="js">app.use(express.static("public"));</p>
+<hr>
+<p>A buttonban ÁT KELL ÍRNI name=listre hogy lehessen rá hivatkozni, illetve az értékét dinamikusan változóra</p>
+ <p class="html">name="list" value= <%= vminap %> </p>
+ <p>Mivel <rm class="html">action="/"</rm> így az oldalba <rm class="js">app.post("/", function(req, res){}</rm>-be kell írni</p>
+  <p> kitudod íratni az értét:</p>
+ <p class="js">console.log(req.body);</p>
+ <hr>
+ <p>Más téma:</p>
+  <p> hogy tudjuk a EJS-t használni arra, hogy minden lábléc és fejléc ugyan az legyen "< header>" "< footer>"</p>
+ <p>ha levágom a fejet <em class="html">< body></em>-ig akkor ezt be kell tennem</p>
+ <p>A views mappában nyitni kell egy <em>footer.ejs</em>-t és egy <em>header.ejs</em>-t</p>
+ <p>majd ide behelyezni...</p>
+ <p>meghívni pedig a tetején</p>
+ <p class="html"><em>< %- include("header") -%></em></p>
+ <p>alján</p>
+ <p class="html"><em>< %- include("footer") -%></em></p>
+ <p> ként lehet</p>
+</body>
+</html>
