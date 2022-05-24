@@ -1,0 +1,74 @@
+body {
+  text-align: center;
+}
+/**navbar**/
+.navbar {
+  padding: 0% 10%;
+
+}
+
+.nav-item {
+  margin: 0px 20px
+}
+
+.btn-warning {
+  border-radius: 12px;
+}
+
+.navbar {
+  position: relative;
+}
+.navbar-dark{
+  text-size:2rem;
+}
+
+#headtext {
+  /*helye*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0);
+}
+
+#header{
+
+    /* The image used */
+    background-image: url("https://cdn.wallpapersafari.com/64/11/TR1mYL.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*rólam*/
+#rolam{
+  color:#fff;
+  border-radius: 0 0 40% 40%;
+  height:  700px;
+  padding-top: 10%;
+}
+
+.color{
+  background-color: #080;
+}
+/*szolgáltatások*/
+#szolgaltatas{
+background-color: #fff;
+padding:0% 5%;
+  border-radius: 0 0 40% 40%;
+  height:  700px;
+}
+
+/*kacsolatok*/
+#kacsolatok{
+  background-color: #080;
+  height:auto;
+}
+
+.socialm:hover{
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+}
