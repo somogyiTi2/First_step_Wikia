@@ -155,10 +155,8 @@ switch ($nap) {
     case 'P':
       echo "Péntek";
     break;
-default:
-  echo "Nem tom mi van...";
-  break;
-}
+default:  echo "Nem tom mi van...";
+  break;}
 echo "<h1>SZIA MIZU ITT ÍGY MÜKSZIK IS A HTML CSAK SORONKÉNT KELL ÍRNI NEKI HOGY</h1><p>
 vagy is csak ha valamit kodosan is szét akarunk integrálni...
 </p>";
