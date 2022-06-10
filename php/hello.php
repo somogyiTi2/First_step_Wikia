@@ -66,16 +66,16 @@ echo("-----válasz--------");
 var_dump($osszekapcsoltTomb[1]["neme"]);//lány
 
 
-foreach($araylist as $araylist){//elsőnek a tömb madj a változó neve ami minden elemhez hozzá lesz rendelve
-  echo $araylist, ", ";// it mindegy hogy közte , vagy . van ???
+foreach($araylist as $pista){// Az első a lista a második az új lista neve amire hivatkozni fog.
+  echo $pista, ", ";
 }//a klódbok végén nem kell ;
 
-echo("-----válasz--------");
+echo("<h1>itt</h1>");
 
 $osszerakashozPelda=["eslő","második","stb"];
 
-foreach ($osszerakashozPelda as $index => $osszerakashozPelda) {
-  echo $index . '-'. $osszerakashozPelda.",";
+foreach ($osszerakashozPelda as $index => $laci) {
+  echo $index . '-'. $laci.",";
 }
 echo("-----válasz--------");
 // FONTOS ha közben ugyan azon a néven iktatok be egy változót nem szól viszont kicsréli
@@ -155,11 +155,42 @@ switch ($nap) {
     case 'P':
       echo "Péntek";
     break;
-default:  echo "Nem tom mi van...";
-  break;}
+default:
+  echo "Nem tom mi van...";
+  break;
+}
 echo "<h1>SZIA MIZU ITT ÍGY MÜKSZIK IS A HTML CSAK SORONKÉNT KELL ÍRNI NEKI HOGY</h1><p>
 vagy is csak ha valamit kodosan is szét akarunk integrálni...
 </p>";
 echo"<p>
 echo
 </p>";
+echo "<h1>ADATBÁZISHOZ KAPCSOLÁS:</h1>";
+
+/*4 dolog kell ahhoz, hogy összekapcsoljuk az adatbvel*/
+
+$db_host = 'localhost';/*kell a szerver neve*/
+$db_name = "cms";/*a db neve*/
+$db_user = '123456'; /*felhasználó név*/
+$db_pass = '123456' ;/*és  a jelszó*/
+/*MI A HIBA?!! WT*/
+$conn = mysqli_connect ($db_host, $db_user, $db_pass, $db_name);
+/*$conn = new mysqli("localhost", "cms", "555", "cms_www");*/
+if (mysqli_connect_error()){
+  echo mysqli_connect_error();
+  exit;
+} echo "Connected succesfully /* \n";
+
+/*lekérdezés*/
+$sql ="SELECT *
+      FROM `article`
+       ";
+
+$results = mysqli_query($conn,$sql);
+
+if ($results === false) {
+  echo mysqli_error($conn);/*miért kell belé a Conn? WT*/
+} else {
+  $kk = mysqli_fetch_all($results, MYSQLI_ASSOC);/*MYSQLI_ASSOC Odaírja a tulajdonság nevét*/
+  /*var_dump*/print_r($kk);
+}
