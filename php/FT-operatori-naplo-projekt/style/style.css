@@ -1,0 +1,46 @@
+
+/***login***/
+.login{
+  background-color:#6CC4A1 ;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+
+/***naplo***/
+.logout{
+  position: absolute;
+  right: 5%;
+}
+
+.naplo{
+    background-color:#A0D995 ;
+}
+
+
+.keres{
+  margin:5%;
+}
+
+.col-md-2{
+  margin: 10px;
+}
+/***felvitel***/
+
+.felvitel{
+    background-color:#F6E3C5 ;
+}
+
+.col-md-3{
+  margin: 5%;
+}
+/***vezetői***/
+.vezeto{
+  background-color: #4CACBC;
+}
+fieldset{
+  margin:0 10% ;
+}
