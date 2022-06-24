@@ -14,7 +14,7 @@ var_dump($_POST);
   <title>Form</title>
 </head>
 <body> <!--a getnél URLbe látszik veszélyes méret határ post securiti nem URL nincs limit-->
-  <form method="post"> <!--akkor kell postot használni ha szenzitív az adat-->
+  <form method="post"  action="/form.php"> <!--akkor kell postot használni ha szenzitív az adat-->
  <!--action="process_form.php">-->
  <fieldset> <!--részekre szedi-->
    <legend>Legend</legend><!-- fieldset fejléc neve -->

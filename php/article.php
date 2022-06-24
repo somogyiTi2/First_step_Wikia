@@ -9,37 +9,41 @@ $db_name = "cms";
 $db_user = "123456";
 $db_pass = "123456";*/
 
-include 'includes/database.php';
+require 'includes/database.php';
+require 'includes/article.php';/*ide emeltük ki ezt a részt*/
 
-$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+$conn= getDB();
+/*$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
 if (mysqli_connect_error()) {
     echo mysqli_connect_error();
     exit;
-}
+}*/
 
-if (isset($_GET['id']) && is_numeric($_GET['id'])){//isset=nem null; is_numeric=SZÁM?
-
-}
-
-$sql = "SELECT *
-        FROM article
-        WHERE id = " . $_GET['id'];// az a poszt jön be amihez odaírom a URL-ben a ? után az id-t
-
-/*var_dump($sql);*/
-
-$results = mysqli_query($conn, $sql);
-
-if ($results === false) {
-
-    echo mysqli_error($conn);
-
+if (isset($_GET['id'])/* && is_numeric($_GET['id'])*/){//isset=nem null; is_numeric=SZÁM?
+  $article = getArticle($conn, $_GET['id']);
 } else {
-
-    $article = mysqli_fetch_assoc($results);
-
+  $article = null;
 }
-
+//  $sql = "SELECT *
+//        FROM article
+//          WHERE id = " . $_GET['id'];// az a poszt jön be amihez odaírom a URL-ben a ? után az id-t
+//
+//}
+//
+/*var_dump($sql);*/
+//
+//$results = mysqli_query($conn, $sql);
+//
+//if ($results === false) {
+//
+//    echo mysqli_error($conn);
+//
+//} else {
+//
+//    $article = mysqli_fetch_assoc($results);
+//
+//}
 ?><!--
 <!DOCTYPE html>
 <html>
@@ -53,6 +57,7 @@ if ($results === false) {
         <h1>My blog</h1>
     </header>
 -->
+
 <?php require 'includes/header.php';?>
     <main>
 

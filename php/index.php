@@ -14,6 +14,7 @@ if (mysqli_connect_error()) {
 */
 
 include 'includes/database.php';
+$conn= getDB();
 $sql = "SELECT *
         FROM article
       /*  WHERE id=0 *//*ez mi van ha nicns a if használatára*/
@@ -40,7 +41,7 @@ if ($results === false) {
     </header>
 -->
 <?php require 'includes/header.php';?>
-
+<a href="new-article.php">new-article.php</a>
 
     <main>
         <?php if (empty($articles)): ?>
@@ -51,7 +52,8 @@ if ($results === false) {
                 <?php foreach ($articles as $article): ?>
                     <li>
                         <article>
-                            <h2><a href="article.php?id=<?= $article['id']; ?>"><?= $article['title']; ?></a></h2>
+                            <h2><a href="article.php?id=<?= $article['id']; ?>">
+                              <?= htmlspecialchars($article['title']); ?></a></h2>
                             <p><?= $article['content']; ?></p>
                         </article>
                     </li>

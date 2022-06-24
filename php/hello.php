@@ -1,3 +1,22 @@
+<head>
+  <style media="screen">
+  table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+  </style>
+</head>
 <?php //Nyitórész
 
 $message = "Hello again!";//FONTOS! HA NEM ZÁROD LE A KÖVI SOR NAM MŰKÖDIK!
@@ -181,6 +200,7 @@ if (mysqli_connect_error()){
   exit;
 } echo "Connected succesfully /* \n";
 
+echo "<h1>HELLÓ</h1>";
 /*lekérdezés*/
 $sql ="SELECT *
       FROM `article`
@@ -192,5 +212,80 @@ if ($results === false) {
   echo mysqli_error($conn);/*miért kell belé a Conn? WT*/
 } else {
   $kk = mysqli_fetch_all($results, MYSQLI_ASSOC);/*MYSQLI_ASSOC Odaírja a tulajdonság nevét*/
-  /*var_dump*/print_r($kk);
+  /*var_dump*//*print_r($kk[1]['title']);*/
+ echo "<table>";
+  foreach ($kk as $key => $k) {
+    echo "<tr>".
+    "<td>".$k["id"]."</td>".
+    "<td>".$k["title"]."</td>"
+    ."</tr>";
+  };
+ echo "</table>";
+}
+
+//az ár 1,99 GBP
+$price= 1.99;
+$szia= 10;
+  echo "The price is {$price}GBP</br>";//nem mindegy hogy mi van a változóba
+
+  echo "The price is".$price."GBP</br>";
+
+echo "The price is".$price.$szia."GBP</br>";//egybe írja
+ echo "The price is $price $szia GBP</br>"; //nem írja egybe
+ echo "The price is {$price}GBP</br>"; //jó
+
+ echo "The price is $priceGBP"; //HIBÁS $priceGBP tenné be
+
+
+$fruit = ['apple', 'banana', 'orange', 'mango'];
+
+ ?>
+
+ <!DOCTYPE html>
+ <html>
+     <head>
+
+         <title>Fruit</title>
+     </head>
+     <body>
+     <h1>Fruit</h1>
+ <ol>
+    <?php foreach($fruit as $value){ ?>
+    <!--// foreach($fruit => $value){ HIBÁS SZINTAXIS
+    => a kulcs milyen értékre utal-->
+    <li><?=$value?></li>
+   <?php } ?>
+
+    </ol>
+
+
+
+     </body>
+ </html>
+
+ <?php
+ FELADAT:
+ $posts = [1 => 'Good news', 3 => 'Read this', 5 => 'Important announcement'];
+
+ ?>
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <title>Posts</title>
+     </head>
+     <body>
+
+     <h1>Posts</h1>
+
+     <ul>
+         <?php foreach($posts as $id => $title): ?>
+              <li><a href='<?php echo "post.php?id={$id}"; ?>'><?=$title;?></a></li>
+              <li><a href="<?php echo 'post.php?id='.$id.'"' ?>><?=$title;?></a></li>"
+         <?php endforeach; ?>
+     </ul>
+     </body>
+ </html>
+<?php
+function szia (){
+  code ;
 }
