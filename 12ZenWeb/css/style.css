@@ -1,3 +1,148 @@
-body{
-  background-color: red;
+body {
+  text-align: center;
+  font-family: 'Italiana', serif;
+}
+h1{font-family: 'Macondo', cursive;}
+h2{font-family: 'Macondo', cursive;}
+h3{font-family: 'Macondo', cursive;}
+p{font-family: 'Gloria Hallelujah', cursive;}
+/*
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Italiana', serif;
+font-family: 'Macondo', cursive;*/
+/**navbar**/
+
+.navbar {
+  padding: 0% 10%;
+}
+
+.nav-item {
+  margin: 0px 20px
+}
+
+.btn-warning {
+  border-radius: 12px;
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar-dark {
+  text-size: 2rem;
+}
+
+#headtext {
+  /*helye*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0);
+}
+
+#header {
+  border-radius: 0 0 40% 40%;
+  /* The image used */
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://i.ytimg.com/vi/6_wKl8NtmBo/maxresdefault.jpg");
+  /* Set a specific height */
+  min-height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*rólam*/
+#rolam {
+  color: #fff;
+  border-radius: 0 0 40% 40%;
+  height: 700px;
+  padding-top: 10%;
+}
+
+.color {
+  background-color: #148436;
+}
+
+/*szolgáltatások*/
+#szolgaltatas {
+  background-color: #fff;
+  padding: 0% 0%;
+  border-radius: 0 0 20% 20%;
+  height: 600px;
+}
+
+
+@media (max-width:990px)  {
+  #szolgaltatas {
+    height: 1000px;
+  }
+
+}
+
+.card {
+  border-radius: 10%;
+  color: white;
+}
+
+.first {
+  background-color: #148436;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://cf.ltkcdn.net/garden/images/orig/217480-2000x1330-Filicopsida-Fern-Fronds.jpg");
+}
+
+.first:hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://cf.ltkcdn.net/garden/images/orig/217480-2000x1330-Filicopsida-Fern-Fronds.jpg");
+}
+
+.card-body {
+  filter: opacity(100%);
+}
+
+.four{
+  background-color: #148436;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://molnarajandek.hu/sites/default/files/tartalomkepek/relax.jpg");
+}
+.four:hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://molnarajandek.hu/sites/default/files/tartalomkepek/relax.jpg");
+}
+
+.secund {
+  background-color: #148436;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://molnarajandek.hu/sites/default/files/tartalomkepek/relax.jpg");
+}
+
+.secund:hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://molnarajandek.hu/sites/default/files/tartalomkepek/relax.jpg");
+}
+
+.third {
+  background-color: #148436;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://static.vecteezy.com/system/resources/thumbnails/002/568/528/original/pool-water-texture-video.jpg");
+}
+
+.third:hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://static.vecteezy.com/system/resources/thumbnails/002/568/528/original/pool-water-texture-video.jpg");
+}
+
+/*kacsolatok*/
+#kacsolatok {
+  background-color: #148436;
+  height: auto;
+  margin-bottom: 0px;
+
+
+}
+
+.socialm:hover {
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
 }
