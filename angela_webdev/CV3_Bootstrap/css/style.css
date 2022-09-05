@@ -1,0 +1,201 @@
+/*hierarhia: 1.ID 2.Class (classban mindig a lejebbi (2.)az elsődleges parancs) 3.html elemek*/
+/*Általános***/
+body {
+  font-family: 'Montserrat-black', sans-serif;
+  margin: inherit;
+  text-align: center;
+
+}
+a{
+  color:black;
+}
+
+/*rövitések---*/
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+.rolunk{
+  color: #9d80d0;
+}
+.Saysomething{
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #fff;
+}
+.big-heding {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.price-text {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.padding315 {
+  padding: 3% 15%;
+}
+
+/*Szekciók---*/
+.szinessz{
+  background-color: #798bad;
+  color: #fff;}
+
+.fehersz{
+    background-color: #fff;
+}
+
+.parallax {
+  /* The image used */
+ background-image: url(https://scontent-vie1-1.xx.fbcdn.net/v/t39.30808-6/275185036_258568813133753_619425913607715881_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=lsZ9Y7Y8mt0AX-_6jjO&_nc_ht=scontent-vie1-1.xx&oh=00_AT-V5LcVBok6ezyyvs0R2N8FdAzZ2FWKsVHcN7-x63KvTw&oe=62493BE6);
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*fontos azért a szétszedés*/
+
+p {
+  color: #8f8f8f;
+}
+
+/*Általános***/
+/*title***/
+#title {
+  text-align: left;
+  margin: 0;
+  padding:3% 15% 7%;
+}
+
+#title .container-fluid{/*ebben a szekcióban ezt változtatom meg*/
+  padding:3% 15% 7%;
+}
+.kepeim-img {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+
+.h2r{
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  line-height: 1.5;
+  padding-left: 50%;
+}
+/*Navigation Bar**/
+.navbar {
+  padding: 0px 0px 4.5rem;
+}
+
+.nav-item {
+  padding: 5px;
+}
+
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 0px;
+}
+
+.dropdown-item {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+.navbar-brand {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/*Navigation Bar**/
+/*Title**/
+.felsokep {
+  width: 500px;
+  margin-right: 0;
+  text-align: left;
+  border-radius: 100%;
+}
+
+/*Title**/
+/*features***/
+
+.skill-box {
+  padding: 5%;
+}
+
+/*karkotok***/
+#karkotok {
+  background-color: #a1bcf0;
+  height: auto;
+  width: auto;
+}
+
+
+/*orak***/
+.htorak {
+  /* The image used */
+ background-image: url(https://scontent-vie1-1.xx.fbcdn.net/v/t39.30808-6/275009707_258576869799614_8768929082841962244_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_ohc=hG3FTETcKcUAX_cDYKI&_nc_ht=scontent-vie1-1.xx&oh=00_AT8sjgYgvuh04h6DtDjNgZvohcG2cGXfHN7YK78HmWH1Zg&oe=6248E58C);
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.kepeim{
+   height:500px;
+  margin: 20px;}
+
+
+
+/*képnézegető gomb kijebb legyen*/
+.carousel-item {
+  padding: 7% 15%;
+}
+
+/*pricing***/
+#CV_data {
+  padding: 100px;
+}
+.card-body{
+  text-align: left;
+  color: #432f78;
+
+}
+.parna-col {
+  padding: 3% 2%;
+  /*3fel le 2 jobb bal*/
+}
+
+/*pricing***/
+/*cta***/
+#kapcsolat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*cta***/
+/*footer***/
+#footer {
+  background-color: #fff;
+}
+
+.sicon {
+  margin: 20px 10px;
+}
+/*footer***/
+/*FONTOK
+font-family: 'Dancing Script', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Press Start 2P', cursive;
+*/
