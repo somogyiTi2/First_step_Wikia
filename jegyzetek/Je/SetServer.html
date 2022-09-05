@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Backend Számológépes feladat</title>
+  <link rel="stylesheet" href="../Je.css">
+</head>
+<body>
+  <div style="text-align:left">
+  <a  href="../../index.html">Vissza</a></div>
+  <p>Miután kész az alkamazásunk fel kell mennünk <a href="https://dashboard.heroku.com/apps">heroku</a>oldara</p>
+  <p>Ezen felül meg kellene nyitni egy másik ablakot</p>
+  <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up">Itt a dokumentáció</a>
+  <p>Kikeresni mi is az keretrenszer amit használunk majd a getStartjára rányomni</p>
+  <p>Ha a node.js akkor feltelepíteni az adott programot.</p>
+  <p>leelemörizni a megfelelő verzió számokat</p>
+  <p class="h">node -- versio</p>
+  <p>(a node itt csak példa)</p>
+  <p>Az adott projekt mappűában létre kell hozni EGY FORMÁTUM NÉLKÜLI filt "Procfile" néven</p>
+  <p class="h">touch Procfile</p>
+  <p>Majd belemenni atommal és beleírni: <em class=js>web: node app.js</em> (habár az oldal nállam azt írja, hogy: <em class=js>web: npm start</em>)</p>
+  <p>Ezek után a hiperbe írjuk a következőt</p>
+  <p class=h>git init</p>
+  <p> Hozzá kell adnunk a git-hez amit használunk.</p>
+  <p class=h>git add .</p>
+  <p> Hogy vissza lehessen verziószám:</p>
+  <p class="h">git commit -m "Firs commit"</p>
+  <p> Létre kell hozni egy új "alkamazást" Hiroku-n</p>
+  <p class="h">heroku create</p>
+  <p>fel kell (tólni) tenni a LOCKAL verziót</p>
+  <p class="h">git push heroku master</p>
+  <hr>
+  <p>Vizsgálat.</p>
+  <p class="h">heroku logs --tail</p>
+  <hr>
+
+</body>

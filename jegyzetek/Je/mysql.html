@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SQL</title>
+</head>
+<body>
+
+      <h1>SQL</h1>
+      <p>A_I oszlop = autómatikus kitöltés </p>
+      <p>Varchar- spaces karakteres</p>
+      <p>ORDER BY valami DESC; = Növekvő sorrendbe eszerint</p>
+      C:\xampp\mysql\data
+      <p>ha az url után ? után SQL írok akkor <em>SQL injekció</em>-ról beszélönk</p>
+
+      <h1>Az adatbázisba adat beillesztés formája:</h1>
+      <h2>INSERT INTO article VALUES (200, 'Title here', 'Contenet','2022-02-13 12:20:12')</h2>
+      <p>INSERT INTO _TÁBLANÉV_ VALUES (_ADAT_ADAT_)</p>
+      <h2>Ha csak egyes tulajdonságai vannak meg a táblának:</h2>
+      <p>INSERT INTO article (title,content) VALUES ('Titles', 'Contenets')</p>
+      <h2>ezt többel is meg lehet tenni</h2>
+      <p>INSERT INTO article (title,content) VALUES ('Egyes cím', 'Coooontenets'), ('Kettű cím', 'Kontent')</p>
+    <h2>Update</h2>
+      <p>'UPDATE `EBBEN A TÁBLÁBAN`</p>
+      <p>  SET `naplo_l` = "ERRE ALAKÍTOM ÁT", </p>
+      <p>    WHERE `jogok`.`id` = "AHOL EZ EGYEZIK"';</p>
+
+    <h3>ha nincs where feltétel a táblában mindent módosít</h3>
+        <h2>Delet</h2>
+        <p>DELETE FROM `EBBE A TÁBLÁBA` </p>
+        <p> WHERE id= FELTÉTEL</p>
+        <h3>ha nincs where feltétel a táblában mindent eltöröl</h3>
+</body>
+</html>

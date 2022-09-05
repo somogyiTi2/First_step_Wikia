@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>@javascriptmax</title>
+  <style type="text/css" media="all">
+    body
+    {
+      user-select: none;
+    }
+    input , table
+    {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    input
+    {
+      padding:20px 10px;
+      margin-bottom: 10px;
+    }
+    td
+    {
+      background: linear-gradient(-10deg,#888,#fff);
+      width: 25%;
+      text-align: center;
+      height: 35px;
+    }
+    td:active
+    {
+      background: linear-gradient(-10deg,#fff,#888);
+    }
+    div
+    {
+      background: slategray;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input id="result" disabled>
+    <table>
+      <tr>
+        <td onclick="result.value+=7">7</td>
+        <td onclick="result.value+=8">8</td>
+        <td onclick="result.value+=9">9</td>
+        <td onclick="result.value+='+'">+</td>
+      </tr>
+      <tr>
+        <td onclick="result.value+=4">4</td>
+        <td onclick="result.value+=5">5</td>
+        <td onclick="result.value+=6">6</td>
+        <td onclick="result.value+='-'">-</td>
+      </tr>
+      <tr>
+        <td onclick="result.value+=1">1</td>
+        <td onclick="result.value+=2">2</td>
+        <td onclick="result.value+=3">3</td>
+        <td onclick="result.value+='*'">×</td>
+      </tr>
+      <tr>
+        <td onclick="result.value=''">AC</td>
+        <td onclick="result.value+=0">0</td>
+        <td onclick="result.value=eval(result.value)">=</td>
+        <td onclick="result.value+='/'">÷</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

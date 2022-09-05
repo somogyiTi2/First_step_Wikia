@@ -1,0 +1,25 @@
+body{background-color:#222a3a;
+color: #E3F2FD;
+font-size: 1rem; }
+
+a{color:black; }
+
+#Frontend{
+background:#3b4451;
+}
+#backend{
+  background-color:#3b4451;
+}
+#sql{
+  background-color:#3b4451;
+}
+#php{
+    background-color:#3b4451;
+}
+#fontos{
+  background-color: #3b4451;
+}
+li, div{
+  margin:10px;
+}
+.row{margin:0px;}

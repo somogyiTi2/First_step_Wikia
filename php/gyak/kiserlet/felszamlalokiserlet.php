@@ -1,0 +1,90 @@
+<?php
+$ertek=1000000;
+$innen=50;
+?>
+<head>
+  <style>
+    .tabel-scroll{width: 100vw;}
+  </style>
+</head>
+<div class=tabel-scroll>
+<table style="cursor: url('https://cdn.custom-cursor.com/db/13763/32/futurama-philip-j-fry-speaker-pointer.png'),
+  move;">
+  <thead>
+    <tr>
+      <th>Inherited value</th>
+      <th><code>bolder</code></th>
+      <th><code>lighter</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="counter"><?=$ertek?></th>
+      <td class="counter">400</td>
+      <td class="counter">100</td>
+    </tr>
+    <tr>
+      <th class="counter">200</th>
+      <td class="counter">400</td>
+      <td class="counter">100</td>
+    </tr>
+    <tr>
+      <th class="counter">300</th>
+      <td class="counter">400</td>
+      <td class="counter">100</td>
+    </tr>
+    <tr>
+      <th class="counter">400</th>
+      <td class="counter">700</td>
+      <td class="counter">100</td>
+    </tr>
+    <tr>
+      <th class="counter">500</th>
+      <td class="counter">700</td>
+      <td class="counter">100</td>
+    </tr>
+    <tr>
+      <th class="counter">600</th>
+      <td class="counter">900</td>
+      <td class="counter">400</td>
+    </tr>
+    <tr>
+      <th class="counter">700</th>
+      <td class="counter">900</td>
+      <td class="counter">400</td>
+    </tr>
+    <tr>
+      <th class="counter">800</th>
+      <td class="counter">900</td>
+      <td class="counter">700</td>
+    </tr>
+    <tr>
+      <th class="counter">900</th>
+      <td class="counter">900</td>
+      <td class="counter">700</td>
+    </tr>
+  </tbody>
+  </div>
+</table>
+<?=$innen?>
+<div><span class="counter">2000</span></div>
+<!--jquery hivatkozások hozzá-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+
+<script>
+  /*.counter osztályba működik*/
+$('.counter').each(function () {
+  $(this).prop('Counter', <?=$innen?>)/*innen számol ha nagyobb le ha kissebb fel*/.animate({
+    Counter: $(this).text() },
+  {
+    duration: 20000, /*idő 1000 i mp*/
+    easing: 'swing',/*dinamikusan gyorsuló*///a lineal
+    step: function (now) {
+      $(this).text(Math.ceil(now));
+    } });
+
+});
+</script>

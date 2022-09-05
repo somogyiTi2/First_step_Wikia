@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Backend Számológépes feladat</title>
+  <link rel="stylesheet" href="../Je.css">
+</head>
+<body>
+  <a href="../../index.html">Vissza</a>
+  <a href="Unix_alapok.html">vissza a leíráshoz</a>
+  <div class="html"> <h1>HTML:</h1>
+  <p>
+
+     html lang="en">
+  </p><p>
+
+      head>
+  </p><p>
+
+        meta charset="UTF-8">
+  </p><p>
+
+        meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </p><p>
+
+        meta http-equiv="X-UA-Compatible" content="ie=edge">
+  </p><p>
+
+        title>Számológép/title>
+  </p><p>
+
+      /head>
+  </p><p>
+
+      body>
+  </p><p>
+
+        h1>Számológép /h1>
+  </p><p>
+
+        form action="/" method="post"><!--"index.html" ne az indexre azaz a gépünkön lévő oldalra hanem a szerver fő könyvtárába azaz "/"-be küldje-->
+  </p><p>
+
+          input type="text" name="num1" placeholder="Első szám"<!--ez a magyarázat-->>
+  </p><p>
+
+          input type="text" name="num2" placeholder="Második szám"<!--ez a magyarázat-->>
+  </p><p>
+
+          button type="submit" name="submit">Számolás /button>
+  </p><p>
+
+        /form>
+  </p><p>
+
+      /body>
+  </p><p>
+
+        /html>
+    </div>
+  <div class="js"><h1>JS:</h1>
+  </p><p>
+
+      const /*konstans*/ express= require/*kérdések*/("express");
+  </p><p>
+
+      const bodyParser = require("body-parser");/*deffiniálni kell amit használok */
+</p><p>
+
+
+  </p><p>
+
+      const app= express();
+  </p><p>
+
+      /*az express által bizotsítja, hogy meghatározza mi történjen*/
+  </p><p>
+
+      /*a body parser expressel működik? */
+  </p><p>
+
+      app.use(bodyParser.urlencoded({extended: true /* kiterjesztett opció*/ }));/*sok fajtája van, ahogy fel lehet használni a bodyParser et
+  </p><p>
+
+      pl .text() .json() /*ami egy sperc java formátunm*//*urlencoded és ezt használjuk ürlapról.*/
+</p><p>
+
+
+</p><p>
+
+
+</p><p>
+
+
+  </p><p>
+
+      app.get("/",/*az első paraméter*//*"/" a home paget jelentik*/ function(req/*kérdés evt is szoktak heylyette írni vagy req*/, res/*válasz vagy res*/){
+    </p><p>
+
+        /*console.log(request);*/
+  </p><p>
+
+        /*res.send("Hello Word");*/
+  </p><p>
+
+        console.log(__dirname);/*a __ vonal adja meg az akutális mappa nevét*/
+  </p><p>
+
+        /*kiírja most, hol is van*/
+  </p><p>
+
+        res.sendFile(__dirname + "/index.html");
+  </p><p>
+
+      });
+</p><p>
+
+
+</p><p>
+
+
+  </p><p>
+
+      app.post("/", function(req, res){
+</p><p>
+
+
+  </p><p>
+
+      var num1= Number(req.body.num1);/*szövegként érkezik*/
+  </p><p>
+
+      var num2= Number(req.body.num2);/*A Number()-el tudjuk számmá alakítani*/
+  </p><p>
+
+      var eredmeny= num1 + num2;
+</p><p>
+
+
+  </p><p>
+
+        res.send("Az eredmény: "+eredmeny)
+  </p><p>
+
+        /*console.log(req.body.num1);/*ez az utolsó állapota a req-nak*/
+  </p><p>
+
+      /*kiírja az num1 es számot*/
+</p><p>
+
+
+  </p><p>
+
+      /*  res.send("Köszi megkaptam")*/
+  </p><p>
+
+      });
+</p><p>
+
+
+  </p><p>
+
+      app.listen(3000, /*3000 protra figyeljen*//*ha + funkicó kell akkor ,*/ function(){
+  </p><p>
+
+        console.log("Megyek");
+  </p><p>
+
+      });
+</p>
+    </div>
+
+</body>
+</html>

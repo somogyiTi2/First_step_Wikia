@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS</title>
+  <link rel="stylesheet" href="../Je.css">
+  <!--IDE TEDD-->
+  <script type="text/javascript">
+
+  </script>
+</head>
+
+<body>
+  <a href="../../index.html">vissza</a>
+  <p style="color:white">Take it script:</p>
+  <div id="elsoszakasz">
+    <div class="feladat">First</div>
+    <div class="kod">
+      var szam=1;
+      szam=2;
+      szam=3;
+      var myName =/*érték*/ prompt ("Mi a neved?");
+      /*itt bekérem a késöbbi értéket*/
+      /*prompt ("Mi a neved?");/*szöveget bekérés consol*/
+      window.alert("Hello "+myName+szam);/*ezt írja ki */
+      alert("It is the World!");
+      /*say ("Hiba");*/
+      typeof(23);/*megmondja milyen "adattípus" a konzolon*/
+      typeof("string");/*megmondja milyen "adattípus" a konzolon*/
+    </div>
+    <div class="feladat">Feladat: Megcserélni a-t és b-t</div>
+    <div class="kod">
+      var a=3;
+      var b=8;
+      /*eddig van megadva*/
+      var c=b;
+      b=a;
+      a=c;
+      c=null;
+    </div>
+    <div class="feladat">Megmondja hány karaketrből áll valami</div>
+    <div class="kod">
+      var name="Tibi";
+      var hosszuszoveg="adasdasdasdasd";
+      var karaterekszama= name.length;/*megmondja hány karaketrből áll valami*/
+      var hosszudb= hosszuszoveg.length;
+    </div>
+    <div class="feladat">Hány kakarkter van még valamiből hátra ha 200 nak kell lennie</div>
+    <div class="kod">
+      szove="0";
+      var szoveg =/*érték*/ prompt ("szövegelj:");
+      /*var db=szoveg.length;*/
+      alert ("Ennyit írtál: "+szoveg.length+" ennyit kellen még: "+(200-szoveg.length));
+    </div>
+    <div class="feladat">
+      A 2-4 harmadik karakteri levágni a megadott karatkersorozatot.
+    </div>
+    <div class="kod">
+      /*var name ="Tibi"
+      name.slice(0,1);/*0-tól 1 ig kiveszem a karatkerláncból*/
+      var name ="Tibi"
+      name.slice(2,4);/*A 2. és a 4. karaktert veszi ki
+    </div>
+    <div class="feladat">Feladat implementálni, hogy csak 15 karaktert lehessen bevinni</div>
+    <div class="kod">
+      var szoveg = prompt("szövegelj:");
+      var kiirhato15 = szoveg.slice(0,15)
+      alert(kiirhato15);
+    </div>
+    <div class="feladat">Leegyszerűsítve</div>
+    <div class="kod">
+      alert(prompt("szövegelj:").slice(0,5));
+    </div>
+    <div class="feladat">Kisbetü nagybetü állítása</div>
+    <div class="kod">
+      var szoveg="Tibi";
+      /*szoveg=/*ezzel az eredeti értéket felül lehet írni*/
+      szoveg =szoveg.toUpperCase();/*az összes karaktert nagy vetüvé változtatja*/
+      szoveg = name.toLowerCase();/*kis karaterekre vált.*/
+    </div>
+    <div class="feladat">Bekérni egy nevet és csak az első betüjét nagy betüre változtatni</div>
+    <div class="kod">
+      var nev = prompt ("Mi a neved?");/*ez lett az értéke most*/
+      var elso=nev.slice(0,1); /*első karaktert levágja és elso értékké teszi*/
+      alert(elso.toUpperCase()+nev.slice(1));
+      /*alert el kiírom majd megidézem az elp betüt nagyban majd a név változót
+      az első karakter kihagyásával leiratom*/
+    </div>
+    <div class="feladat">Egysterűsítés + debug ha minden nagy akkor csak így hozza ki...</div>
+    <div class="kod">
+      var nev = prompt ("Mi a neved?");/*ez lett az értéke most*/
+      alert("Hello"+nev.slice(0,1).toUpperCase()+nev.slice(1).toLowerCase());
+    </div>
+    <div class="jegyzet"> Matek és számolás alapok JS nyelven</div>
+    <div class="kod">
+      <p>4+2//6
+      <p>4-2//2
+      <p>6/4//1,5
+      <p>6%4//2 a maradékot adja meg...
+    </div>
+    <div class="jegyzet">Ha azt akarjuk meghatározni, hogy páros e a 45 pl akkor %2 és így ha
+      az érték ( maradék)= 0 akkor az érték páros, ha nem akkor páratlan.</div>
+    <div class="kod">45%2//1 tehát páratlan</div>
+    <div class="jegyzet">A kód ismeri a műveleti sorrendet, azonban ajánlatos, a könnyebb olvashatóság érdekében ()-ezni.<p></div>
+    <div class="feladat">Hány éves a kutyád a képlet (dogAge-2)*4+21;</div>
+    <div class="kod">dogAge= prompt(" Hány éves a kutyád?");
+      humanAge= (dogAge-2)*4+21;
+      alert("kutya évben:" +dogAge+ " emberi évben: "+ humanAge);</div>
+    <div class="feladat">egyszerűsítésnél, fontos, ha stinget használok egy ()-ben akkor a + jelentése+""stringként fogom fogom fel...</div>
+    <div class="kod">
+      alert("kutya évben:" +dogAge+ " emberi évben: "+ ((dogAge-2)*4+21));//ha nincs zárójel a végére21 et ír...
+    </div>
+    <p></p>
+    <div class="jegyzet"><p>Szintaxis</p>
+      var x=5;
+      /*<p>*/x++//x+1
+        /*
+      <p>*/x--//x-1
+        /*
+      <p>*/x+=2//+2
+        /*
+      <p>*/var a = 16 % 4; //0
+        /*
+      <p>*/
+        /*
+      <p>*/---
+        /*
+      <p>*/var x=3;
+        /*
+      <p>*/var y=x++;//3 mivel nem x+=1 van ezért nem számít...
+        /*
+      <p>*/y+=1;//4
+        /*
+      <p>*/---
+        /*
+      <p>*/var x=3;
+        /*
+      <p>*/var y=x=+1;//4 MIVEL =+1
+        /*
+      <p>*/y+=1;//5
+    </div>
+    <div class="feladat"> function /*kulcsszó hogy funkció*/ makenoting() /*a neve a funkciónak*/ {
+      /*ide pedig a feladat*/
+      }; /*be kell zárni ; vel*/</div>
+    <p></p>
+    <div class="feladat">
+      Ha csak azt szeretnénk, hogy a konzolba fusson le "console.log"
+    </div>
+    <div class="kod">
+      function getMilk () {
+      console.log("egyet balra");//a console.log arra való, hogy konzolra írja ki a
+      console.log("egyet balra");
+      console.log("egyet jobbra");
+      console.log("egyet fel");
+      console.log("arra");
+      };
+      getMilk();
+    </div>
+    <div style="color: #0f5">
+      <a href="https://stanford.edu/~cpiech/karel/ide.html">Karel</a>
+      5x5 ösön
+    </div>
+    <div class="feladat2">feladat: keresztbe letenni a dolgokat
+      <div class="kod2">
+        function main(){
+        putBeeper();
+        felpont();
+        felpont();
+        felpont();
+        felpont();
+        }
+        function felpont(){
+        move();
+        turnLeft();
+        move();
+        turnRight();
+        putBeeper();
+        }
+      </div>
+      <div class="feladat2">
+        <p>Sakktábla </p>
+      </div>
+      <div class="kod2">
+        function main(){
+        asor();
+        move();
+        bsor();
+        turnRight();
+        asor();
+        move();
+        bsor();
+        turnRight();
+        asor();
+        turnRight();
+        }
+        function egylep(){
+        move();
+        move();
+        putBeeper();
+        move();
+        move();
+        putBeeper();
+        }
+        function kettolep(){
+        move();
+        putBeeper();
+        move();
+        move();
+        putBeeper();
+        move();
+        }
+        function asor(){
+        putBeeper();
+        egylep();
+        turnLeft();
+
+        }
+        function bsor(){
+        turnLeft();
+        kettolep();
+        turnRight();
+        move();
+        }
+      </div>
+    </div>
+    <p>
+    <div class="jegyzet">/*így viszek be változót egy fügvénybe */</div>
+    <div class="kod">
+      /*fenkció fügvényNév (VáltozóNeve){maga a fügvény}<p>*/
+        function getMilk (uveg) {
+        console.log("egyet balra");//a console.log arra való, hogy konzolra írja ki a
+        console.log("egyet balra");
+        console.log(uveg+" üveg tejet kell vennem")
+        console.log("egyet jobbra");
+        console.log("egyet fel");
+        console.log("arra");
+        };
+        getMilk(12);
+        /*a fügvény meghívása (Változó értéke)*/
+    </div>
+    <p>
+    <div class="jegyzet">Math.floor()</div>
+    <div><a href="https://en.wikipedia.org/wiki/Floor_and_ceiling_functions"><img style="width:20%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Floor_function.svg/1200px-Floor_function.svg.png" alt="Math floor"></a></div>
+    <div class="feladat">/*feladat: x dollárt adok a robotnak és neki ki kell számolni, hány üveg tejet tud venni érte*/</div>
+    <div class="kod">
+      function getMilk(penz) {
+      console.log("egyet balra"); //a console.log arra való, hogy konzolra írja ki a
+      console.log("egyet balra");
+      var uvegdb = (Math.floor(penz / 1.5));
+      console.log(uvegdb + " üveg tejet kell vennem");
+      console.log("egyet jobbra");
+      console.log("egyet fel");
+      console.log("arra");
+      };
+      getMilk(19);
+    </div>
+    <div class="feladat">Mennyi időd van még 90 éves korig?</div>
+    <div class="kod">
+      function elet(kor){
+      var Mevek= 90-kor;
+      var Mnapok=Mevek*365;
+      var Mhetek=Mevek*52;
+      var Mhonap=Mevek*12;
+      console.log("Ennyid van még hátra 90 éves korig:"+
+      " Maradt évek "+Mevek+
+      " Azaz hónapok "+Mhonap+
+      " Azaz hetek "+Mhetek+
+      " Azaz napok "+Mnapok);
+      }
+      elet(24);
+    </div>
+    <div class="feladat">Mennyi jár vissza?</div>
+    <div class="kod">
+      function getMilk(penz) {
+      console.log("egyet balra"); //a console.log arra való, hogy konzolra írja ki a
+      console.log("egyet balra");
+      var uvegdb = (Math.floor(penz / 1.5));
+      console.log(uvegdb + " üveg tejet kell vennem");
+      console.log("egyet jobbra");
+      console.log("egyet fel");
+      console.log("arra");
+      return penz% /*tej ára*/1.5;//ez azért kell, hogy legyen visszakapott érték
+      };
+      var penz= getMilk(20);
+      console.log(penz);
+    </div>
+    <div class="feladat">Objektumizálni és megadhatóvá tenni mennyi a tej</div>
+    <div class="kod"> function getMilk(penz, uvegar) {
+      console.log("egyet balra");
+
+      console.log(uvegkalkulator(penz, uvegar) + " üveg tejet kell vennem");
+
+      console.log("egyet jobbra");
+
+      return visszajaro(penz, uvegar); /*vissa adja az értéket*/
+
+      };
+
+      function uvegkalkulator(startpenz /*kezdő pénz*/ , uvegar /*uveg ára*/ ) {
+      var uvegdb = Math.floor(startpenz / uvegar);
+      return uvegdb;
+      }
+
+      function visszajaro(startosszeg, uvegar) {
+      var vissajar0 = startosszeg % uvegar;
+      return vissajar0; //vissza adom a vissajár0 változó értékét a
+      }
+
+      /*ebben az esetben itt beírhatom mennyit adok neki és mennyi a visszajáró
+      értem ezt 20 Ft adok és 3 Ft a tej*/
+      console.log("Hello mester itt a visszajaro " + getMilk(20, 3));
+    </div>
+    <div class="feladat">/*BMI mértő (BMI=KG/mˇ2)*/</div>
+    <div class="kod">
+      //Hozza létre a függvényét e sor alatt.
+      function bmikalkulator(suly,magassag){
+      bmi= Math.round(suly/(magassag*magassag));/* round kerekít*/
+      /* A bmi-nek 20-nak kell lennie, ha a legközelebbi egész számra kerekítjük.*/
+      elteres= 20-bmi;
+      /*console.log(bmi);
+      console.log("Ennyit kellene változnod: "+elteres);*/
+      return bmi;
+      return elteres;
+      };
+      //Az első paraméter a súly, a második pedig a magasság legyen.
+      /* Ha a súlyom 65 kg és a magasságom 1,8 m, akkor a következőképpen
+      hívhatom meg a függvényedet:
+      var bmi = bmiCalculator(65, 1.8);
+      */ var bmi = bmikalkulator (65, 1.8);
+      console.log(bmi);
+      console.log("Ennyit kellene változnod: "+elteres);
+    </div>
+    <hr>
+  </div>
+  <div id="masodikszakasz">
+    <div class="jegyzet"><p>A Math.random generátor</p>
+      A Math.random generátor 0-0,9... (16 db számjegy)között ad egy random számot
+    </div>
+    <div class="feladat">Random generátorral dobokockát generálni....</div>
+    <div class="kod">
+      var. n=Math.random();
+      n=n*6;
+      n=Math.floor(n)+1;/*azért kell a +a mert 0-5 ig mennének a számok*/
+    </div>
+    <div class="feladat">Szerelem kalkulátor 0-100 közt számok</div>
+    <div class="kod">
+      prompt("Személy1 neve:")
+      prompt("Személy2 neved");
+      var a =Math.random();
+      a=Math.floor(a=a*100)+1;
+      console.log("kalkulatoron belül:"+a);
+    </div>
+    <div class="feladat">if bevezetése (szerelmi utasítás...)</div>
+    <div class="kod">
+      prompt("Személy1 neve:")
+      prompt("Személy2 neved");
+      var Love=Math.random()*100;
+      Love=Math.floor(Love)+1;
+      console.log("kalkulatoron belül:"+Love);
+
+      if (Love>70)/* (Love===100)/*ha valami egyelő akkor 3*= kell használni*/ {
+      alert("WOW "+Love+"% elég ütösen jó!");
+      }
+      else{
+      alert("Ennyi százalékot értetek el: "+Love+ "%");
+      }
+    </div>
+    <div class="jegyzet"><p>MATEK szimbólum ALAP /* </p>
+      === egyenlő (adattípust is ellenörzi) <p></p>
+      == egyenlő (NEM ellenörzi az adattípust) <p></p>
+      !== nem egyenlő a bal a jobbal <p></p>
+      > nagyobb <p></p>
+      < kisebb <p>
+        </p>
+        >= nagyobb vagy egyenlő/*<p></p>*/
+        <= kisebb vagy egyenlő/*<p>
+          </p>*/
+          FONTOS! <p></p>
+          var a=1; number <p></p>
+          var b="1"; String <p></p>
+          példap <p></p>
+
+          if (a===b){
+          console.log("yes")}
+          else{
+          console.log ("no");//HA === akkor NEM EGYEZIK MEG
+          } /*<p></p>*/
+
+          if (a==b){
+          console.log("yes")}//megfog egyezni == nél
+          else{
+          console.log ("no");
+          }
+
+          MATEK LOGIKAI KAPUK <p></p>
+          && AND ÉS <p></p>
+          || OR VAGY <p></p>
+          ! NOT NEM (azaz valami velenkezője Igen=nem Nem= igen)
+
+    </div>
+    <div class="feladat">if tovább fejlesztett változat</div>
+    <div class="kod">
+      prompt("Személy1 neve:")
+      prompt("Személy2 neved");
+      var Love=Math.random()*100;
+      Love=Math.floor(Love)+1;
+      console.log("kalkulatoron belül:"+Love);
+
+      if (Love>70)/* (Love===100)/*ha valami egyelő akkor 3*= kell használni*/ {
+      alert("WOW "+Love+"% elég ütösen jó!");
+      }
+      if (Love >30 && Love <= 70){ alert("Nem rossz "+Love+" % van esélyed. ;) ");
+        }
+        if (Love<=30){/*figyelj oda kis és nagybetükre a változóknál*/
+        alert(" Hát igyá meg valamit azt utánna csapj bele "+Love+ " %"); } </div>
+    <div class="feladat">Szökőév-e?</div>
+    <div class="kod">
+          var az= "nem tom";
+          szokoeve();
+          alert(az);
+          function szokoeve()
+          {
+          var ev = prompt("adj egy évet:");
+          console.log("1 " + ev);
+          if (ev % 4 === 0) {
+          if (ev % 100 === 0) {
+          if (ev % 400 === 0) {
+          return az="Szökőév";
+          } else {
+          return az="Nem szökőév. 400 al nem osztható"
+          }
+          } else {
+          return az="Szökőév. 100 al nem osztható."
+          }
+          } else {
+          return az="Nem szökőév. 4 el nem osztható"
+          }
+          }
+    </div>
+    <div class="jegyzet"><p>Tömb alkotás </p>
+      var Nevek= ["Norbi", "Krissz", "Andris", "Ali", "Tibi"];
+      <p>Lekérdezés:  </p>
+      var nevkeredzo = Nevek[1];// Krissz
+      mivel 0 val kezdi a számolást a gép.
+      <p>Megszámolhatjuk mennyi elem van a tömbe</p>
+      var mennyi = Nevek.length;//5
+      <p></p>
+      <p>Meg tudom, nézni, hogy már egy adott elem a része e így:  </p>
+      Nevek.includes("Ali");
+    </div>
+    <div class="feladat">BELÉPTETÉS: Megnézni benne van-e valaki a listában</div>
+    <div class="kod">
+      var Nevek= ["Norbi", "Krissz", "Andris", "Ali", "Tibi"];
+      var getName= prompt("Mi a neved?");
+      if (Nevek.includes(getName)) {
+        alart("Benne vagy a listában");
+      }
+      else{
+        alart("Nem vagy benne a listába");
+      }
+
+    </div>
+    <div class=feladat>Kiszedni a duplikációt</div>
+    <div class=kod>
+      var kimenet=[];
+      kimenet.push(1);/*ezzel nyomom bele a tömbe az elemeket*/
+      kimenet.push(2);
+      kimenet.push(2);
+     kimenet.pop();/*ez kiszedi amiből 2 lenne*/
+    </div>
+    <div class="iyA">
+      Írjon egy olyan programot ami kiírja a számoakt egytől 100-ig.
+      3-nak a többszöröse helyett írja hogy "Fizz" és az 5 többszörösére írja, hogy Buzz.
+      Olyan számokat ahol mind a kettő teljesül írjon "FizzBuzz" kifejezést.
+    </div>
+    <div class="feladat"> Első verziója a FizzBuzz-nak ami még nem számol fel 100 ig...</div>
+    <div class="kod">
+      var kimenet=[];
+      var szamolo=1;
+      function FizzBuzz() {
+
+      if( szamolo % 3 ===0 && szamolo % 5 ===0 ){
+        kimenet.push("FizzBuzz");
+      }
+
+        else if (szamolo % 3 === 0){
+          kimenet.push("Fizz");
+        }
+        else if (szamolo % 5 === 0){
+            kimenet.push("Buzz");
+          }
+
+          else{
+          kimenet.push(szamolo);}
+
+
+        console.log(kimenet);
+        szamolo++;
+      }
+    </div>
+    <div class="feladat">Random egy név húzása (uzsi)</div>
+    <div class="kod">
+      var Nevek= ["Norbi", "Krissz", "Andris", "Ali", "Tibi"];
+      /*mennyien vagyunk*/
+      function kifizetma() {
+      var mennyien= Nevek.length;
+      /*var valasztas= Math.random()*mennyien;*//*így sose lehet az utcsó mert 0-0,999 és így
+      0-4,99999 ig megy csak*/
+      var valasztas= Math.floor( Math.random()*mennyien);
+      var valaki= Nevek[valasztas];
+      console.log(valaki);
+      return valaki+ " fizet ma!";
+      }
+    </div>
+    <div class="iyAM"><p>MEGOLDÁS:</p>
+      var kimenet=[];
+      var szamolo=1;
+      function FizzBuzz() {
+      while (szamolo<=100){
+      if( szamolo % 3 ===0 && szamolo % 5 ===0 ){
+        kimenet.push("FizzBuzz");
+      }
+
+        else if (szamolo % 3 === 0){
+          kimenet.push("Fizz");
+        }
+        else if (szamolo % 5 === 0){
+            kimenet.push("Buzz");
+          }
+
+          else{
+          kimenet.push(szamolo);}
+        szamolo++;
+      }
+      console.log(kimenet);
+      }
+
+    </div>
+    <div class="iyAM"><p>Újra megoldás gyakorlásnak</p>
+      function FizzBuzz(){
+        var szamolo=1;
+        var fizzi=[];
+        while (szamolo<=100) {
+          if(szamolo%3===0 && szamolo%5){
+            fizzi.push("FizzBuzz")
+          }
+           else if(szamolo%3===0){
+            fizzi.push("Fizz");
+          }
+          else if (szamolo%5===0){
+            fizzi.push("Buzz");
+          } else{
+          fizzi.push(szamolo);}
+          szamolo++;
+        }
+        return fizzi;
+      }
+      var fizzi=FizzBuzz();
+      console.log(fizzi);
+    </div>
+    <div class="jegyzet"><p>For ciklus </p>
+      for (i=0/*kezdőpont*/;i< 2/*végpont*/; i++/*mi változik*/){
+      /*csinálj valamit */
+      } <p>Példa</p>
+      for(var i=1; i< 2; i++){
+      console.log(i);
+      } //Eredmény: 1
+    </div>
+    <div class="iyAM"> <p>FizzBuzz for MEGOLDÁS</p>
+      var kimenet=[];
+       function FizzBuzz() {
+          for (let i = 1; i <= 100; i++) {
+            if( i % 3 === 0  && i % 5 ===0 ){
+              kimenet.push("FizzBuzz");
+            }else if (i % 3 === 0){
+              kimenet.push("Fizz");
+            }else if (i % 5 === 0){
+              kimenet.push("Buzz");
+            }else{
+              kimenet.push(i);
+            }
+          }
+          console.log(kimenet);
+        }
+      FizzBuzz();
+    </div>
+    <div class="feladat"><p>Fibonacci </p>
+      <p> 0,1,1,2,3,5,8,13,21,34,55,89,144... </p>
+      <p>Minden elöző számot összead.</p>
+      <p>A feladat megadni hányadik elemig írja ki, a sort.</p>
+
+    </div>
+    <div class="kod">
+      function fibonaccigenerator(n){
+
+      var output=[];
+      if (n===1){
+        output= [0];
+      }
+      else if(n===2){
+        output=[0,1];
+      }
+      else {
+        output=[0,1];
+
+        for(var i= 2; i< n ;i++){
+        output.push(output[output.length-2]+
+           output[output.length-1]);
+        }
+      }
+      return  output;
+      }
+      output=fibonaccigenerator(20);
+      console.log(output);
+      </div>
+    <div class="kod"><p>Saját újra megoldva</p>
+      function fibonaccigenerator(n){
+      var output=[];
+        if(n===1){
+          output=[0];
+        }
+        else if (n===2) {
+          output=[0,1];
+        }
+        else if (n=>3){
+            output=[0,1];
+        for(var i=1; i< n;i++){
+        output.push(output[output.length-1]+output[output.length-2]);
+        }
+        }
+        return output;
+        }
+
+      var output=fibonaccigenerator(20);
+      console.log(output);
+
+      </div>
+    <hr></hr>
+  </div><!--id vége-->
+  <div id="harmadikszakasz">
+    <h1>Fogalmak</h1>
+    <h2>Tulajdonságok (Get Prorety)</h2>
+    <h3>Olyan "kód részlet" amellyel megnézhetjük valaminek a tulajdonsáságát
+    mint páldául car.color;//red </h3>
+    <h2>Tulajdonság BEÁLLÍTÁS (Set Property)</h2>
+    <h3>Olyan tulajdonság mellyel megváltozatjuk magát a már létező tuladjonságot
+    car.nuberOfDoor=0; //a ajtaja lett a kocsinknak.</h3>
+    <h2>Metódus (call Method)</h2>
+    <h3>Olyan folyamat amely csinál valamit. car.drive()//elinul az autó</h3>
+    <h2>Metodus vs Függvény</h2>
+    <h3>Egyetlen különbség a metódus és a függvény között,
+      hogy a metódus olyasvalami, amit egy objektum képes elvégezni,
+      tehát társítani kell egy objektumhoz.</h3>
+        <hr></hr>
+  </div>
+  <div id="negyedikszakasz">
+    <div class= "feladat">Csináljunk egy számológépet</div>
+    <div class="kod">
+      function szor(numb1,numb2){
+        return numb1*numb2;
+      }
+      function add(numb1,numb2){
+        return numb1+numb2;
+      }
+      function gep(numb1,numb2,op){
+        return op (numb1, numb2);
+      }
+    </div>
+    <div class="jegyzet">Lényegében meg tudjuk hívni a fügvényt egy fügvényen fügvényen belül
+      és ezt végrehajtatni <p><strong>Ezeket magasabb rendű fügvényeknek hívjuk</strong></div></p>
+    <div class="feladat">debugger funkició <em>(az elözőhöz)</em></div>
+    <div class="kod">
+      debugger;
+      gep(2,3,szor);
+    </div>
+    <div class="kod">/*Teljes számológép kód*/
+      function add(num1, num2) {
+      return num1 + num2;
+      }
+
+      function subtract(num1, num2) {
+      return num1 - num2;
+      }
+
+      function multiply(num1, num2) {
+      return num1 * num2;
+      }
+
+      function divide(num1, num2) {
+      return num1 / num2;
+      }
+
+      function calculator(num1, num2, operator) {
+      return operator(num1, num2);
+      }
+      </div>
+    <div class="jegyzet"><h1>Objektumok</h1>
+      Lényegében egy objektum több tulajdonséggal/metódussal is rendelkezhet
+      </div>
+    <div class="kod">
+      var houseKeeper1={
+        yearOfExperience: 12,
+        name: "Jane",
+        cleeingRepertoire:                ["Bathroom", "lobby","bedroom"],
+      }
+      /*minden adat róla*/
+      houseKeeper1
+
+      /*mi a neve?*/
+      console.log(houseKeeper1.name)</div>
+    <div class="jegyzet"><h1>KONSTELÁTOR FÜGVÉNY:</h1></div>
+    <div class="kod">/*Kérdőív készítése, hogy az objektumokat könnyebben létre tudjuk hozni.*/
+      function BellBoy (name, age, hasWorkPermit, Languges){
+        this.name=name;
+        this.age=age;
+        this.hasWorkPermit=hasWorkPermit;
+        this.Languges=Languges;
+      }
+      /*csinálj új változót*/
+      var hk1=new BellBoy("Tibi",9,2,["Hello","Bello"]);
+      var hk2=new BellBoy("Krisz",20,5,["Bani","Netezik"]);
+    </div>
+    <div class="kod">
+      function BellBoy (name, age, hasWorkPermit, Languges){
+              this.name=name;
+              this.age=age;
+              this.hasWorkPermit=hasWorkPermit;
+              this.Languges=Languges;
+      this.visz=function (){
+      alert("Vidd a bőröndöt")};
+      }/* funkció meghívása*/
+      var hk1=new BellBoy("Tibi",9,2,["Hello","Bello"]);
+      hk1.visz();/*funckció futtatása vele*/
+    </div><hr> </div>
+  <div id="otodikszakasz">
+    <div class="jegyzet"><h1>jQuery</h1>
+      document.querySelector("h1"); = jQuery("h1"); = $("h1")
+    </div>
+  </div>
+  <div><h1>ISMÉTLÉS</h1>
+  </div>
+</body>
+
+</html>

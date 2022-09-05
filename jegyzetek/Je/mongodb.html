@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS</title>
+  <link rel="stylesheet" href="../Je.css">
+  <!--IDE TEDD-->
+  <script type="text/javascript">
+
+  </script>
+</head>
+<body>
+  <a href="index.html">vissza</a>
+  <h1>Telepítés:</h1>
+  <p>Ha sikeres volt a telepítés akkor hozz létre egy mappát a c-ben amiben csinálsz egy db nevü mappát.</p>
+  <p>ezek után írd be:</p>
+  <p class=h>cd~</p>
+  <p class=h> touch .bash_profile</p>
+  <p class=h>vim .bash_profile</p>
+  <p>~~~~~ fog kiírni a Hyper</p>
+  <a href="https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-4ee4b3493514">Help</a>
+  <h2>NYOMD MEG AZ I-betűt így egy más modba kerül a hiper alul ki fogja írni.</h2>
+  <p class=h>alias mongod="/c/Program\ files/MongoDB/Server/4.0/bin/mongod.exe"
+  alias mongo="/c/Program\ Files/MongoDB/Server/4.0/bin/mongo.exe"</p>
+  <p>(persze az aktuális verzióra javítsd )</p>
+  <p>NYOMD MEG AZ ESC-et</p>
+  <p class=h>:wq!</p>
+  <p>Nyisd újra a Hypert és nézd meg, hogy ha beírod, hogy: <em class=h>mongo --version</em> onnan tudod, hogy működik-e </p>
+  <hr>
+  <h1>Hogy használd írd be, hogy <em class=h> mongod</em></h1>
+  <p>ki kell keresni belőle a <em class=h>"Waiting for connections","attr":{"port":27017,"ssl":"off"}}</em>-ot</p>
+  <p>Új ablak</p>
+  <p class="h">mongo</p>
+  <p>ha elfelejtenék valamit a ">" után beírom, hogy <em class=h>help</em> </p>
+  <p>ezzel meg tudom, nézni pl hol mennyi adat van:</p>
+  <p class="h">show dbs</p>
+  <p>adatbázis létrehozás</p>
+  <p class=h> use neveazadattáblánakDB</p>
+  <p><em class="h">db</em> parancsal mindig megtudom nézni épp milyen adatbázisok vannak.</p>
+  <p><em class="h">db.adatbneve.insert({_id: 1,name: "Pen", price:1.20})</em>így tudunk hozzáadni adaotot.</p>
+  <p><em class="h">show collections</em> </p>
+  <p><em class=h>db.adatbneve.find()</em> Kilistázza az adatbázist ha semmit nem íunk bele</p>
+  <p><em class=h> db.products.find({name: "Pencil"})</em> Ha speciálisan a pencilt keresném.</p>
+  <p><em class=h>> db.products.find({price: {$gt: 1}})</em> 1 nagyobb</p>
+  <p> A második elleme a selectet határozza meg és az 1 es a true</p>
+  <hr>
+  <h1>Update (adat frissítés)</h1>
+  <p><em class="h">> db.products.updateOne({_id: 1}, {$set: {stock: 32}})</em>A zárójelbe a felételt írjuk ebben az esetben <em>_id:1</em></p>
+  <p>Így adhatunk hozzá akár új változót is.</p>
+  <hr>
+  <h1>Delet (törlés)</h1>
+  <p><em class="h">db.products.deleteMany({_id: 2})</em>Letörli ahol id=2 a products táblában</p>
+  <hr>
+  <h1>Adat bevitel</h1>
+  <h2>Első lehetőség:</h2>
+  <p class="h">
+    db.products.insert(
+    {
+      _id:3,
+      name:"Rubber",
+      price: 1.30,
+      stock: 43,
+      /*véleményeket egy tömb segítségével ábrázoljuk.*/
+      reviews: [
+      {
+        authorName:"Sally",
+        rating: 5,
+        review:"Legjobb radir!"
+      },
+      {
+        authorName:"Josh",
+        rating: 5,
+        review:"Király racska!"
+      }
+      ]
+    }
+    )
+  </p>
+  <p>Új elem hozzáadása</p>
+  <p class="h">
+    db.products.insertOne({
+      _id:2,
+      name: "Pencil",
+      price:0.80,
+      stock: 12,
+      review: [
+      {  authorName:"Sally",
+        rating: 5,
+        review:"Legjobb cerka!"}
+      ]
+    })
+  </p>
+  <h2>Másik lehetőség:</h2>
+  <p class="h">
+    {
+      _id:1,
+    name:"Pen",
+    price: 1.20,
+    stock:32
+  }
+  {
+    _id:2,
+    name:"Price"
+    price:0.80,
+    stock: 12
+  }
+
+  {
+    orderNumber:3243,
+    productsOrdered:[1,2]
+  }
+  </p>
+  <hr>
+<h1>Adatbázis törlése</h1>
+<h2 class="jegy">Fontos, hogy abban a mappába nyissuk meg ahol van a hypert</h2>
+Elsőnek ki kell választani az adatbázist
+<p class="h">use fruitDB</p>
+Majd a <em class="h"> db.dropDatabase()</em>
+</body>

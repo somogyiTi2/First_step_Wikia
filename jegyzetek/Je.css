@@ -1,0 +1,67 @@
+body{ background-color: #262626;
+color:#fff}
+
+.regi{font-size: 1rem;}
+
+.sql{color: #FFC000;}
+
+.h{color:#09f;}
+
+.js{color: #0f0;}
+
+.w{color:white;}
+
+.html{color:#f90}
+
+a{color:#009;}
+
+a:hover{color:#0ff;}
+
+hr{ border-color:#baf;
+  border-style: dashed ;
+  border-width: 2px;
+  }
+
+.fogalom{color:#f178a1}
+
+.feladat {
+  color: #fa2;
+}
+
+.jegyzet {
+  color: #baf;
+}
+
+.kod {
+  color: #2f2;
+}
+
+.kod2 {
+  color: #2b2;
+}
+.mia{
+  background-color: black;
+   color: white;
+}
+.feladat2 {
+  color: #f82;
+}
+
+#elsoszakasz, #masodikszakasz, #harmadikszakasz, #negyedikszakasz #otodikszakasz{
+  padding: 1%;
+}
+
+.iyA{/*itt azokat írom le ami Andzsela szerint lehet az interjun...*/
+  color:#f00;
+
+  padding:0px 10% }
+
+.iyAM{/*itt azokat írom le ami Andzsela szerint lehet az interjun...*/
+    color:#C00;
+
+    padding:0px 10% }
+
+.valasz{
+  color:#050;
+  background-color: #FFC000;
+}

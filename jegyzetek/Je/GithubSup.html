@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Git jegyzet</title>
+  <link rel="stylesheet" href="../Je.css">
+  <style>
+    img{width: 49%}
+  </style>
+</head>
+<body>
+<a href="../../index.html">vissza</a>
+<p>Létre kell hozni a file mellet egy gti filet</p>
+<p class="h">git init </p>
+<p>Mivel rejett file így csak <em class="h">ls -a</em> val látom.</p>
+<p>hozzá kell adnunk az épp adott munkát a githez</p>
+<p class="h">git add <em>filenev.txt</em></p>
+<p>így nézhetjük meg mi van benne:</p>
+<p class="h">git status</p>
+<p>Kommentelhetem <em class="h">git commit -m "Ez itt a komment"</em></p>
+<p>Láthatjuk ki és mikor adta le ezzel a paranccsal:</p>
+<p class="h">git log</p>
+<p>Ha meg akarjuk nézni a különbséget azt kell beírnunk</p>
+<p class="h">git diff <em>filenev.txt</em></p>
+<p>Ha vissza akarom állítani az elöző verziót be kell írnom</p>
+<p class="h">git checkout <em>filenev.txt</em></p>
+<hr>
+<p>Hyperrel is be lehet jelentkezni és feltölteni ezt úgy tudjuk megadjuk a linket amit ad a github új projekt létrehozásánál.</p>
+<p class="h">git remote add origin https://github.com/angelabauer/Story.git</p><em>/*Az origin csak a "távirányító neve ez bármi lehet"*/</em>
+<p class="h"> git push -u origin master</p><em>/*az "-u" összeköti a "távirányítot" a helyi adattárral</em>
+<p>/*oringi=remote master=branch=idővonal*/</p>
+<hr>
+<p>Néha veszélyes ha valamit megosztunk nyilvánosan szóval ha azt akarjuk, hogy ignoráljon egy filt a github:</p>
+<p>léter kell hoznunk a projekt mappánkba egy .gitignore-t</p>
+<p class="h">touch .gitignore</p>
+<p>inicializálom az üres könyvtárat</p>
+<p class="h">git intit</p>
+<p>Majd hozzáadok mindent a könyvtárhoz</p>
+<p class="h"> git add .</p>
+<p><em class="h"> git status</em> meg tudom nézni mi került a git mappába</p>
+<p>ha megondolom magam így tudok mindent kivenni</p>
+<p class="h"> git rm --cached -r .</p>
+<p>(<em class="h">rm remove</em>Remove)</p>
+<p>Be kell írnunk a gitignore-ba a file neveket amiket nem akarunk felrakni</p>
+<p class="h">open gitignore</p>
+<p class="w">.DS_Store</p>/*ez elrejti a mappánk berendezkedését*/
+<p class="w">secrets.txt</p>/*figyelni kell, a kis és nagy betükre mint úgy mindíg*/
+<p class="w">#Így jegyzetelhetünk</p>
+<p class="w">*.txt</p>#Ez az üsszes filet jeletni
+<p> Ha most adunk hozzá mindent akkor csak a gitignore file megy fel.</p>
+<p class="h">git add .</p>
+<hr>
+<p>A letöltés nem olyan jó mint a klón használat. Szóval a klón URL-jét le kell másolni.</p>
+<p class="h">git clone http://github.com/eztmasolutad.git</p>
+<hr>
+<p>Tudsz ágakat is létrehozni azesetre ha megpróbálnál magával aprojektel más oldalról is foglalkozni</p>
+<p>Ág hozzáadása:</p>
+<p class="h">git branch ág-név</p>
+<p>megnézni mennyi ág van a <em class="h">git branch</em>-al lehet</p>
+<p> Ha átváltanánk a másik ágra akkor csak annyit kell beírnunk, hogy</p>
+<p class="h"> git checkout ág-neve</p>
+<div class="jegyzet">
+  <p>Most írjunk bele a dolgokba kísérlet képp majd <em class="h">git add .</em>Enter <em class="h">git commit -m "megváltoztattam"</em> Enter <em class=h>git log</em> látható, hogy az ágon frissítettünk.</p>
+  <p>Most nézzük meg melyik vonalon vagyunk <em class="h">git branch</em> /*ahol van a csilalg az */</p>
+  <p>Váltsunk vissza a mester ágra <em class="h">get checkout master</em></p>
+  <p>Nem változott semmi...</p>
+  <p>Ha most ebbe belepiszkálunk akkor magában a másik ágban nem volt változni semmi.</p>
+</div>
+<p>Össze is vonhajtjuk a két vonalat <em class="h"> git merge ág-neve</em></p>
+<hr>
+<p><a href="https://learngitbranching.js.org/"><h1>Learn game</h1></a></p>
+<hr>
+<p>Forki Megosztásos klónozás?</p>
+<p><a href="../../img/git.html">További parancsok</a></p>
+
+  <tr>
+    <th>
+      <img src="../../img/git.jpg" alt="Eng">
+    </th>
+    <th>
+      <img src="../../img/gitM.jpg" alt="Eng">
+    </th>
+  </tr>
+  <hr>
+  <p class="h">git add .</p>
+  <p class="h">git commit -m "Mit csináltam"</p>
+  <p class="h"> git push heroku master</p>
+
+</body>
+</html>

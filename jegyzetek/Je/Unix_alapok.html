@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Unix,Linux</title>
+  <link rel="stylesheet" href="../Je.css">
+</head>
+
+<body>
+  <a href="../../index.html">vissza</a>
+  <h1>Unix parancsok</h1>
+  <div> <h2>Alap parancsok</h2>
+    <h2>Bash shell</h2>
+    <p>mkdir Mappa /*Új mappa</p>
+    <p>ls -a /* kilistázza mik vannak ott </p>
+    <p>mkdir. Secrets /*titkos mappák kiírása</p>
+    <p>cd $home /*főkönyvtár</p>
+    <p>~ /*ha csak ennyi akkor a rootba vissza megy</p>
+    <p>fel le gombbal választhatok mit szeretnék</p>
+    <p>cd .. /vissza</p>
+    <p>Rövid parancsok Ctrl+A elejére +E végére</p>
+    <p>touch /*ezzel hozol létre bármit ezután csak oda kell írnod mit is akasz pl: <em>touch szoveg.txt</em></p>
+    <p>start atom szoveg.txt /*nyissa meg atomba a szoveg.txt-t</p>
+    <p>rm valami /*valmai törélse</p>
+    <p>pwd/* hol vagyok</p>
+    <p>rm * /*töröl mindent</p>
+    <p>rm - eztmappa /*eztmappa törlése</p>
+    <p>FONTOS HOGY HA AZ ASZTALRA AKAROK MENNI AKKOR A OneDrive/Asztaéi gép mappába kell bemennem</p>
+    <p>node indx.js /*ezzel le tudom futtatni a index.js filt</p>
+    <p>A node JS képessé teszi a Hypert arra, hogy használhassak benne JS-eket amelybe a 'node' beírásával kerülök</p>
+    <p>Innen ki pedig a '.exit' el jutok ki.</p>
+    <p>Ctrl+Shift+C /*másolás</p>
+    <p>Ctrl+Shoft+V /*beillesztés</p>
+    <p>Fel gomb /*elöző parancs </p>
+  </div>
+
+  <div>
+    <h2>JS el vegyítve:</h2>
+      <div class="js">
+      <h4>Ha ezt a JS-t lefuttatom hyperben akkor lényegében megkettőzi a filt...</h4>
+      const /*a const az állandót jelenti*/ fs= require("fs");
+      /*<p>Megjegyzés: a require() egy globális csomópontfüggvény, amely modulok importálására szolgál az aktuális fájlba. Itt adjuk meg az app.js modult egy relatív elérési út használatával, és elhagyjuk az opcionális (.js) fájlkiterjesztést.*/  /*Megjegyzés: a request() egy globális csomópontfüggvény, amely modulok importálására szolgál az aktuális fájlba. Itt adjuk meg az app.js modult egy relatív elérési út használatával, és elhagyjuk az opcionális (.js) fájlkiterjesztést.</p>*/
+      fs.copyFileSync("file1.txt","file2.txt");
+      <h4>Lényegében felül is írja...</h4>
+    </div>
+      <p>clearral le tudom takarítani a konzolt</p>
+      <div class="h">
+        nvm
+        intor-to-node
+        /*enter*/
+        /*miről szól*/
+        /*enter..*/
+        author:ALKOTÓ
+      </div>
+        <hr>
+      <div><h3>NPM</h3>
+        <p class="h">npm install superheroes</p>
+        <h5>Lényegében a superheroes név csomagot töltöm és telepítem fel ezzel az internetől amit az npmjs.com ról szed le</h5>
+        <p class="js">
+          var superheroes= require ("superheroes");
+          var mySuperheroName=superheroes.random();
+          console.log(mySuperheroName);
+        </p>
+        <h5>A letöltött filból átemelek egy metódust és saját ként deffiniálom...</h5>
+        <p class="h"> node index.js</p>
+        <h5>Lefuttatom</h5>
+      </div>
+      <div><h2>Nodemon</h2>
+        <a href="https://nodemon.io/">npm install -g nodemon</a>
+        <h2>Lényegében nézi, hogy frissül e a kód és ha igen akkor elinditja.</h2>
+        <p class="h"> nodemon fileneve.js</p>
+      </div>
+  </div>
+  <hr>
+
+  <div id="ex"> <h1>Express</h1>
+    <div>
+      <h4>A feladat csinálni egy új mappát majd ebben létrehozni egy server.js-t majd a filnak beállítani tulajdonságokat</h4>
+      <p>mrdiv mes</p>
+      <p>cd mes</p>
+      <p>touch server.js</p>
+      <p>npm init</p>
+      <h4>atomba megnyitás</h4>
+      <p>atom .</p>
+      <h4> Az expresst úgy adom hozzá, hogy:</h4>
+      <p>npm install express</p>
+      <p class="js">
+        const /*konstans*/ express= require("express");
+        const app= express();
+
+
+        app.listen(3000,/*3000 protra figyeljen*//*ha + funkicó kell akkor ,*/ function(){
+          console.log("A szerver elindult a 3000 es porton");
+        });
+       </p>
+      <h4>Lefuttatom</h4>
+      <p class="h">node server.js</p>
+      <p class="w">http://localhost:3000/</p>
+      <p style=color:grey>Cannot GET /</p>
+      <p class="js">
+        app.get("/"/*az első paraméter*//*"/" a home paget jelentik*/,function(request/*kérdés evt is szoktak heylyette írni vagy req*/, response/*válasz vagy res*/){
+        /*<h2>FONTOS HOGY REQ az első</h2>*/
+        /*console.log(request);*/
+        response.send("< h1>Hello Word</h1>");
+        });
+        /*az express által bizotsítja, hogy meghatározza mi történjen*/
+        /*app.listen ELÉ*/
+     </p>
+     <p class="h">node server.js</p>
+     <p class="w">http://localhost:3000/</p>
+      <p> <h1 style=color:grey>Hello Word</h1></p>
+    </div>
+
+    <div>
+      <p> Lehetővé teszi az információ átadást</p>
+      <p class=h>npm install body-parser </p>
+    </div>
+    <p>Feladat:</p>
+    <a href="Backend.html">CODE</a>
+  </div>
+  <hr>
+  <p>Ha újra akarom indítani a szervert akkor futás közben be kell írnom, hogy <em class="h">rs</em></p>
+  <hr>
+  <div class="regi">
+    <h1>Régi Linux vázlatok</h1>
+    <div class="régi">
+      <div id="Színek">
+      <h2>SZÍNEK</h2>
+      <p style=color:purple>Lila MAPPA</p>
+      <p style=color:blue>Kék HIVATKOZÁS</p>
+      <p style=color:#0f0>Zöld (kihúzott fekete) Üres mappa?</p>
+      <p style=color:white>Fehér/szürke file</p>
+      </div>
+      <div>
+      <h2>Parancsok</h2>
+      <p> rm* /*törlés (mindet?)</p>
+      <p>pwd /*hol vagyok</p>
+      <p>ls /*látás menü</p>
+      <p>ls-AlF /*minden látása (rejtett cuccok is)</p>
+      <p>cd cd..  /* könyvtárak váltása</p>
+      <p>src /* másolás gépek között</p>
+      <p>scp /*másolás gépek között </p>
+      <p>winscp /* Windowos felület másolása (SSH alpapú)</p>
+      <p>man  /* leírás röviden</p>
+      <p>/boot  /*rendszer állományhoz szükséges hely</p>
+      <p>pwd  /* az épp aktuális könyvtárat írja ki </p>
+      <p style=color:grey>cd cd..  /* könyvtárak váltása</p>
+      <p>cd:  /* aktuális könyvtár megnyitása</p>
+      <p>cd..  /*egy szinttel fejebb a köyvtár fában</p>
+      <p style=color:grey>ls /*látás menü</p>
+      <p style=color:grey>pwd /*hol vagyok</p>
+      <p>cd+... /*amit akarok</p>
+      <p>cd_$home /*Fel a home-ba /*cd~</p>
+      <p>cp /*copy</p>
+      <p>cp fileneve/home/stradus</p>
+      <p>Átnevezés+Áthelyezés /*ha ugyan az a mappa a cél</p>
+      <p>rm valami /*valami törlésection</p>
+      <p>mkdir- mappa léterhozása</p>
+      <p>cd tilde /*aktuális felhasználó</p>
+      <p>rmdir valami /*mappa törlése</p>
+      <p>touch teszt.txt /*új txt file</p>
+      <p>cat/*belenéz valamibe</p>
+      <p>su /*átjlentkezés</p>
+      <p>sudo /*parancs</p>
+      <p>sudo su /*átjelentkezés @rootban pl </p>
+      <p>apt update /*frissítés kiírása</p>
+      <p style=color:grey>pwd /*hol vagyok</p>
+      <p>touch valami /* 0 bit file</p>
+      <p>vi /*szövegszerkesztés</p>
+      <lu>apt
+        <li>list /*listázás</li>
+        <li>searcht/*keresés</li>
+        <li>show/*csomag részletei</li>
+        <li>remove /*törlés</li>
+        <li>autoremove /*használataln csomagok törlése</li>
+        <li>update /*frissítés</li>
+        <li>upgrade /*frissítési csomag telepítése</li>
+      </lu>
+      <p style=color:grey>pwd /*hol vagyok</p>ű
+      <p>^/*kontrolgomb </p>
+      <p>~ /*title</p>
+      <p>q/*queit/exit</p>
+      <p style=color:grey>rmdir valami /*mappa törlése</p>
+      <p>rm-r valami /*rekorzip törlése (ha valami van a mappában nem megy)</p>
+      <p>nano valami /*szövegszerkesztők */ vi valami </p>
+      <p>dir =mappa?</p>
+      <p>mv valami  valami /*áthelyezés pl: <em>mv cloom3.zip tibi3</em></p>
+      </div>
+      <div>
+      <h1>Régi tippek</h1>
+      <p> Alt+Shift= Nyelv váltás Windowos</p>
+      <p>@root=főnök</p>
+      a  d i r> kicsit bejjebb kezdni az egészet valszeg vami mappa szerüséget csinál nek a HTML-el
+    </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
