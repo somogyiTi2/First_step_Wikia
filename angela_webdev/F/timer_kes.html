@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>KES</title>
+</head>
+<body>
+  <p>enyém ha 24 órára osszuk:</p>
+  <p id="ST"></p> + adó:
+  <p id="ado"></p>
+  Eltelt másodpercek:
+  <p id="mp"></p>
+  Eltelt Percben:
+  <p id="perc"></p>
+
+
+  Ennyi napos vagyok
+  <p id="szuli"></p>
+  Jelnelegi egynapi árfolyamom:
+  <p id="life"></p>
+
+  <script>
+    var a=0;
+
+    var myfunc = setInterval(function() {
+
+    var b=30.416*24*60*60;/*azért 30.416 mert átl havonta ennyi nap van egy hónapban*/
+    var c=3392479;/*ennyit kerestem eddig*/
+    /*időutazó*/
+    var d=new Date();/*ma*/
+    var szulinapom = new Date("04/30/1997");/*születési idő*/
+    var difference= Math.abs(d-szulinapom); /*külömbség*/
+    var days = difference/(1000 * 3600 * 24) /*napban*/
+    var oneday = (24*60*60*1000)*1;/*1 nap*/
+    a++;
+    /*dátum kivonás?*/
+    document.getElementById("life").innerHTML= c/(days*oneday);
+    document.getElementById("ST").innerHTML =Math.ceil(a*348837/b);
+    document.getElementById("ado").innerHTML =Math.ceil(a*101163/b);
+    document.getElementById("mp").innerHTML =a;
+    document.getElementById("perc").innerHTML =Math.floor(a/60);
+    document.getElementById("szuli").innerHTML=Math.floor(days);
+    }, 1000)
+  </script>
+
+
+</body>
+
+</html>

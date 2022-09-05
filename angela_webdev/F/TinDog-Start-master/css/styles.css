@@ -1,0 +1,177 @@
+/*hierarhia: 1.ID 2.Class (classban mindig a lejebbi (2.)az elsődleges parancs) 3.html elemek*/
+/*Általános***/
+body {
+  font-family: 'Montserrat-black', sans-serif;
+  margin-bottom: inherit;
+  text-align: center;
+}
+
+/*rövitések---*/
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.big-heding {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.padding315 {
+  padding: 3% 15%;
+}
+/*Szekciók---*/
+.szinessz{
+  background-color: #fe4161;
+  color: #fff;}
+
+.fehersz{
+    background-color: #fff;
+}
+
+/*fontos azért a szétszedés*/
+p {
+  color: #8f8f8f;
+}
+
+/*Általános***/
+/*title***/
+#title {
+  text-align: left;
+}
+
+#title .container-fluid{/*ebben a szekcióban ezt változtatom meg*/
+  padding:3% 15% 7%;
+}
+/*Navigation Bar**/
+.navbar {
+  padding: 0px 0px 4.5rem;
+}
+
+.nav-item {
+  padding: 18px;
+}
+
+.nav-link {
+  font-family: 'Montserrat-light', sans-serif;
+  font-size: 1.5rem;
+}
+
+.dropdown-item {
+  font-family: 'Montserrat-light', sans-serif;
+  font-size: 1.2rem;
+}
+
+.navbar-brand {
+  font-family: 'Montserrat-black', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/*Navigation Bar**/
+/*Download Buttons**/
+.Downloadbt {
+  margin: 5% 3% 5% 0%;
+}
+
+/*Download Buttons**/
+/*Navigation Bar**/
+/*Title kép **/
+.dphone {
+  width: 60%;
+  transform: rotate(25deg);
+  margin-bottom: -40%;
+}
+
+@media (max-width:1099px) {
+  #title {
+    text-align: center;
+  }
+
+  .dphone {
+    transform: rotate(0);
+  }
+}
+
+/*title***/
+/*features***/
+#features {
+  padding: 7% 15%;
+
+  position: relative;
+  z-index: 1;
+}
+
+.feature-box {
+  padding: 5%;
+}
+
+.ikon {
+  color: #ee7467;
+  margin-bottom: 1rem;
+}
+
+.ikon:hover {
+  color: #fe4161;
+}
+
+/*Features ***/
+/*Testimonials***/
+#testimonials {
+  background-color: #ee7467;
+
+}
+
+.testimonials-img {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/*Testimonials***/
+#press {
+  background-color: #ee7467;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/*képnézegető gomb kijebb legyen*/
+.carousel-item {
+  padding: 7% 15%;
+}
+
+/*pricing***/
+#pricing {
+  padding: 100px;
+}
+
+.parna-col {
+  padding: 3% 2%;
+  /*3fel le 2 jobb bal*/
+}
+
+/*pricing***/
+/*cta***/
+#cta {
+  font-family: 'Montserrat-black', sans-serif;
+}
+
+/*cta***/
+/*footer***/
+#footer {
+  background-color: #000;
+  margin-top: 0px;
+}
+
+.sicon {
+  margin: 20px 10px;
+}
+/*footer***/
