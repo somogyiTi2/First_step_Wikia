@@ -1,0 +1,43 @@
+<%- include("header") -%>
+
+  <div class="box" id="heading">
+<h1><%= vminap %>!</h1><!--Ez a jelölője paraméterei"<%= %>"-->
+<!--<h2> Ma < %= hkscpzv %> van. </h2>
+<h1> Ma < %= vminap1 %></h1>-->
+  </div>
+
+    <div class="box" >
+<ul>
+<!--  <li>Buy Food</li>
+  <li>Cook Food</li>
+  <li>Eat Food</li>-->
+  <!--<li>< %= ujlistaelem %></li>-->
+  <% for (var i=0; i<ujlistaelemek.length; i++){ %>
+    <div class="item">
+      <input type="checkbox">
+    <!--<li>--><p><%=ujlistaelemek[i]%> </p><!--</li>-->
+  </div>
+  <%}%>
+
+</ul>
+<form class="item" action="/" method="post">
+  <input type="text" name="Uelem" placeholder="Új elem" autocomplete="off">
+
+  <button type="submit" name="list" value= <%= vminap %> >+</button>
+  <!--submit=Beküldés-->
+
+</form>
+<!--
+  < %
+  if( hkscpzv ==="kedd"|| hkscpzv ==="csütörtök"){
+    % >
+    <h1 style="color:purple"> < %= hkscpzv %> van</h1>
+  < % }else{ %> <!--minden egyes kódsort így be kell jelölnöm és akkor működik- >
+    <h1 style="color:green"> < %= hkscpzv %> van</h1>
+    < %
+  }
+  % >
+-->
+</div>
+
+<%- include("footer") -%>
