@@ -6,20 +6,31 @@ a{color:black; }
 
 #Frontend{
 background:#3b4451;
+border-radius: 40px;
 }
 #backend{
   background-color:#3b4451;
+  border-radius: 40px;
 }
 #sql{
   background-color:#3b4451;
+  border-radius: 40px;
 }
 #php{
     background-color:#3b4451;
+    border-radius: 40px;
 }
 #fontos{
   background-color: #3b4451;
+  border-radius: 40px;
 }
+#react{
+  background-color: #3b4451;
+  border-radius: 40px;
+}
+h1{margin-left: 20px;}
 li, div{
   margin:10px;
+  
 }
 .row{margin:0px;}
