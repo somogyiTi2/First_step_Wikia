@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title #{docTitle}
+        link(rel="stylesheet" href="/css/styles.css")
+    body
+    header.main-header 
+        nav.main-header_nav
+            ul
+                li
+                    a(href="/") Shop
+                li
+                    a.active(href="/admin/add-product") Add Product
+            ul
+    main
+        h1 Add Product
+        form(action="/admin/product" method="POST")
+            .form-control
+                label(for="title") Title
+                input(type="text" id="title" name="title")
+            button.btn(type="submit") Add Product

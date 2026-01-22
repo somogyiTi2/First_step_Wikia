@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title #{docTitle}
+        link(rel="stylesheet" href="/css/styles.css")
+    body 
+        header.main-header
+            nav.main-header_nav
+                ul
+                    li
+                        a.active(href="/") Shop
+                    li
+                        a(href="/admin/add-product") Add Product
+
+    main
+        if prods.length > 0
+            .grid 
+            each product in prods
+                article.card.product-item
+                    header.card_header
+                        h1.product_title #{product.title}
+                    .card_image
+                        img(src="https://picsum.photos/200/300" alt="A great book")
+                    .card_content
+                        h2.product_price $19.99
+                        p This is a great book. You should buy it.
+                    .card_actions
+                        button Add to Cart
+        else
+            h1 No products found.

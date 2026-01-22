@@ -1,0 +1,49 @@
+{{! <html lang='en'> }}
+{{!-- <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>{{docTitle}}</title>
+    <link rel='stylesheet' href='/css/styles.css' />
+  </head>
+  
+    <header>
+      <nav>
+        <ul>
+          <li><a href='/'>Shop</a></li>
+          <li><a href='/admin/add-product'>Add Product</a></li>
+        </ul>
+      </nav>
+    {{!-- </header> --}}
+behivatkozzuk a main-layout-ba --}}
+{{! <body> }}
+<main>
+  {{!-- {{#if prods.length > 0}} --}}
+  {{#if hasProducts}}
+    <div class='grid'>
+      {{!-- {{#each prods}} --}}
+      {{#each prods}}
+        <article class='product-item card'>
+          <header class='card__header'>
+            <h1 class='card__title'>{{this.title}}</h1>
+          </header>
+          <div class='card__image'>
+            <img src='https://picsum.photos/200/300' alt='A Book' />
+          </div>
+          <div class='card__content'>
+            <h2 class='card__price'>$19.99</h2>
+            <p class='card__description'>A great book!</p>
+          </div>
+          <div class='card__actions'>
+            <button>Add to Cart</button>
+          </div>
+        </article>
+      {{/each}}
+    </div>
+    {{!-- {{/if}} --}}
+  {{else}}
+    <h1>No products found!</h1>
+  {{/if}}
+</main>
+
+{{! </body>
+</html> }}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "843294823",
+    "title": "A Book",
+    "imageUrl": "https://www.publicdomainpictures.net/pictures/10000/velka/1-1210009435EGmE.jpg",
+    "description": "This is an awesome book!",
+    "price": "19"
+  },
+  {
+    "title": "ok",
+    "imageUrl": "https://bookingmaze.com/wp-content/uploads/2025/05/IMGWOA.jpg",
+    "description": "sadasd",
+    "price": "3.2",
+    "id": "0.7938884998980456"
+  },
+  {
+    "title": "1.termek",
+    "imageUrl": "https://bookingmaze.com/wp-content/uploads/2025/05/IMGWOA.jpg",
+    "description": "hello 1",
+    "price": "20",
+    "id": "0.45461556201394115"
+  },
+  {
+    "title": "2.termek",
+    "imageUrl": "https://www.publicdomainpictures.net/pictures/10000/velka/1-1210009435EGmE.jpg",
+    "description": "hello2",
+    "price": "52",
+    "id": "0.6092416631360023"
+  }
+]
