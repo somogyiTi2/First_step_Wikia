@@ -1,14 +1,11 @@
 {
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
   "name": "node_js",
   "version": "1.0.0",
   "description": "learn more",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\"",
-    "start": "nodemon app.js"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "anymatch": "^3.1.3",
     "balanced-match": "^1.0.2",
@@ -45,7 +42,10 @@
     "touch": "^3.1.1",
     "undefsafe": "^2.0.5"
   },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
-  }
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\"",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC"
 }
