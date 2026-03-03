@@ -50,13 +50,18 @@ Product.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
 User.hasMany(Product);
 // Egy felhasználóhoz egy kosár tartozik, ezért a User modellhez egy hasOne kapcsolatot adunk a Cart modellel.
 User.hasOne(Cart);
-
+// Egy kosár több felhasználó is tartalmazhat, ezért a Cart modellhez egy belongsTo kapcsolatot adunk a User modellel.
+Cart.belongsTo(User);
+// a belongsToMany kapcsolatot használjuk, mert egy kosár több terméket is tartalmazhat, és egy termék több kosárban is szerepelhet. A through opcióval megadjuk, hogy a CartItem modellt használjuk a kapcsolat táblájaként.
+Cart.belongsToMany(Product, { through: CartItem });
+Product.belongsToMany(Cart, { through: CartItem });
 
 // A modellek szinkronizálása a MySQL-lel, majd a HTTP szerver indítása.
 sequelize
-  .sync({ force: true })
+  //.sync({ force: true })//ha ezzel futtatom akkor létrehozza db-t
+  .sync() //ha ezzel akkor csak szinkronizálja a modelleket a db-vel, de nem hozza létre újra
   .then(result => {
-    // A 1. felhasználó lekeréséhez használt SQL parancs:
+    // A 1. felhasználó lekérése, mert ez a request objektumokban szerepel. A 1. felhasználó lekérése a bejövő kéréséhez használt SQL parancs:
     return User.findByPk(1);
     // console.log(result);
     app.listen(3000);
@@ -69,7 +74,10 @@ sequelize
     return user;
   })
   .then(user => {
-    console.log(user);
+    // console.log(user);
+    user.createCart(); //minden felhasználóhoz létrehozunk egy kosarat a createCart() metódussal, amit a hasOne kapcsolat hoz létre.
+  })
+  .then(() => {
     app.listen(3000);
   })
   .catch(err => {

@@ -8,7 +8,7 @@ exports.getProducts = (req, res, next) => {
       res.render('shop/product-list', {
         prods: products,
         pageTitle: 'All Products',
-        path: '/products'
+        path: '/products',
       });
     })
     .catch(err => console.log(err));
@@ -25,7 +25,7 @@ exports.getProduct = (req, res, next) => {
       res.render('shop/product-detail', {
         product: product,
         pageTitle: product.title,
-        path: '/products'
+        path: '/products',
       });
     })
     .catch(err => console.log(err));
@@ -38,7 +38,7 @@ exports.getIndex = (req, res, next) => {
       res.render('shop/index', {
         prods: products,
         pageTitle: 'Shop',
-        path: '/'
+        path: '/',
       });
     })
     .catch(err => console.log(err));
@@ -46,34 +46,25 @@ exports.getIndex = (req, res, next) => {
 
 // Kosár nézet: a cart.json tartalmát összefésüli a DB-ben lévő termékadatokkal.
 exports.getCart = (req, res, next) => {
-  Cart.getCart(cart => {
-    if (!cart) {
-      return res.render('shop/cart', {
-        path: '/cart',
-        pageTitle: 'Your Cart',
-        products: []
-      });
-    }
-
-    Product.findAll()
-      .then(products => {
-        const cartProducts = [];
-        for (const product of products) {
-          const cartProductData = cart.products.find(
-            prod => prod.id === product.id
-          );
-          if (cartProductData) {
-            cartProducts.push({ productData: product, qty: cartProductData.qty });
-          }
-        }
-        res.render('shop/cart', {
-          path: '/cart',
-          pageTitle: 'Your Cart',
-          products: cartProducts
-        });
-      })
-      .catch(err => console.log(err));
-  });
+  // console.log(req.user.cart);
+  req.user
+    .getCart()
+    .then(cart => {
+      // console.log(cart);
+      return cart
+        .getProducts()
+        .then(products => {
+          // console.log(products);
+          res.render('shop/cart', {
+            path: '/cart',
+            pageTitle: 'Your Cart',
+            products: products,
+          });
+        })
+        .catch(err => console.log(err));
+    })
+    .catch(err => console.log(err));
+  
 };
 
 // Egy termék hozzáadása a kosárhoz, majd visszairányítás.
@@ -93,10 +84,11 @@ exports.postCart = (req, res, next) => {
 exports.postCartDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
   Product.destroy({ where: { id: prodId } })
-    .then((product) => {
-     return product.destroy();
-    }).then(() => {
-      console.log('destroy product')
+    .then(product => {
+      return product.destroy();
+    })
+    .then(() => {
+      console.log('destroy product');
       res.redirect('/cart');
     })
     .catch(err => console.log(err));
@@ -105,13 +97,13 @@ exports.postCartDeleteProduct = (req, res, next) => {
 exports.getOrders = (req, res, next) => {
   res.render('shop/orders', {
     path: '/orders',
-    pageTitle: 'Your Orders'
+    pageTitle: 'Your Orders',
   });
 };
 
 exports.getCheckout = (req, res, next) => {
   res.render('shop/checkout', {
     path: '/checkout',
-    pageTitle: 'Checkout'
+    pageTitle: 'Checkout',
   });
 };
