@@ -1,7 +1,6 @@
 const Product = require('../models/product');
 const Cart = require('../models/cart');
 
-// Minden termék listázása a /products oldalhoz.
 exports.getProducts = (req, res, next) => {
   Product.findAll()
     .then(products => {
@@ -11,17 +10,15 @@ exports.getProducts = (req, res, next) => {
         path: '/products',
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      console.log(err);
+    });
 };
 
-// Egy termék megjelenítése elsődleges kulcs alapján.
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
-  Product.findByPk(prodId)
+  Product.findById(prodId)
     .then(product => {
-      if (!product) {
-        return res.redirect('/products');
-      }
       res.render('shop/product-detail', {
         product: product,
         pageTitle: product.title,
@@ -31,7 +28,6 @@ exports.getProduct = (req, res, next) => {
     .catch(err => console.log(err));
 };
 
-// Kezdőlap: ugyanazt a terméklistát mutatja.
 exports.getIndex = (req, res, next) => {
   Product.findAll()
     .then(products => {
@@ -41,20 +37,18 @@ exports.getIndex = (req, res, next) => {
         path: '/',
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      console.log(err);
+    });
 };
 
-// Kosár nézet: a cart.json tartalmát összefésüli a DB-ben lévő termékadatokkal.
 exports.getCart = (req, res, next) => {
-  // console.log(req.user.cart);
   req.user
     .getCart()
     .then(cart => {
-      // console.log(cart);
       return cart
         .getProducts()
         .then(products => {
-          // console.log(products);
           res.render('shop/cart', {
             path: '/cart',
             pageTitle: 'Your Cart',
@@ -66,13 +60,14 @@ exports.getCart = (req, res, next) => {
     .catch(err => console.log(err));
 };
 
-// Egy termék hozzáadása a kosárhoz, majd visszairányítás.
 exports.postCart = (req, res, next) => {
   const prodId = req.body.productId;
   let fetchedCart;
+  let newQuantity = 1;
   req.user
     .getCart()
     .then(cart => {
+      fetchedCart = cart;
       return cart.getProducts({ where: { id: prodId } });
     })
     .then(products => {
@@ -83,16 +78,14 @@ exports.postCart = (req, res, next) => {
 
       if (product) {
         const oldQuantity = product.cartItem.quantity;
+        newQuantity = oldQuantity + 1;
         return product;
       }
-      return Product.findByPk(prodId);
+      return Product.findById(prodId);
     })
     .then(product => {
-      return req.user.getCart().then(cart => {
-        fetchedCart = cart;
-        return cart.addProduct(product, {
-          through: { quantity: 1 },
-        });
+      return fetchedCart.addProduct(product, {
+        through: { quantity: newQuantity },
       });
     })
     .then(() => {
@@ -101,15 +94,18 @@ exports.postCart = (req, res, next) => {
     .catch(err => console.log(err));
 };
 
-// Termék eltávolítása a kosárból azonosító alapján, majd irányítás.
 exports.postCartDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
-  Product.destroy({ where: { id: prodId } })
-    .then(product => {
-      return product.destroy();
+  req.user
+    .getCart()
+    .then(cart => {
+      return cart.getProducts({ where: { id: prodId } });
     })
-    .then(() => {
-      console.log('destroy product');
+    .then(products => {
+      const product = products[0];
+      return product.cartItem.destroy();
+    })
+    .then(result => {
       res.redirect('/cart');
     })
     .catch(err => console.log(err));
