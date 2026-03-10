@@ -1,5 +1,4 @@
 const Product = require('../models/product');
-const User = require('../models/user');
 
 // Üres űrlap kirajzolása új termékhez.
 exports.getAddProduct = (req, res, next) => {
@@ -26,13 +25,13 @@ exports.postAddProduct = (req, res, next) => {
       imageUrl: imageUrl,
       description: description,
     })
-    .then(() => {
+    .then(result => {
+      // console.log(result);
       console.log('Created Product');
       res.redirect('/admin/products');
     })
     .catch(err => {
       console.log(err);
-      res.redirect('/admin/add-product');
     });
 };
 
@@ -45,7 +44,7 @@ exports.getEditProduct = (req, res, next) => {
   const prodId = req.params.productId;
   req.user
     .getProducts({ where: { id: prodId } })
-    // Product.findByPk(prodId)
+    // Product.findById(prodId)
     .then(products => {
       const product = products[0];
       if (!product) {
@@ -70,16 +69,14 @@ exports.postEditProduct = (req, res, next) => {
   const updatedDesc = req.body.description;
   Product.findByPk(prodId)
     .then(product => {
-      if (!product) {
-        return res.redirect('/admin/products');
-      }
       product.title = updatedTitle;
       product.price = updatedPrice;
-      product.imageUrl = updatedImageUrl;
       product.description = updatedDesc;
+      product.imageUrl = updatedImageUrl;
       return product.save();
     })
-    .then(() => {
+    .then(result => {
+      console.log('UPDATED PRODUCT!');
       res.redirect('/admin/products');
     })
     .catch(err => console.log(err));
@@ -103,8 +100,12 @@ exports.getProducts = (req, res, next) => {
 // Termék törlése azonosító alapján.
 exports.postDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
-  Product.destroy({ where: { id: prodId } })
-    .then(() => {
+  Product.findByPk(prodId)
+    .then(product => {
+      return product.destroy();
+    })
+    .then(result => {
+      console.log('DESTROYED PRODUCT');
       res.redirect('/admin/products');
     })
     .catch(err => console.log(err));

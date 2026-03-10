@@ -17,7 +17,7 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
-  Product.findById(prodId)
+  Product.findByPk(prodId)
     .then(product => {
       res.render('shop/product-detail', {
         product: product,
@@ -28,6 +28,7 @@ exports.getProduct = (req, res, next) => {
     .catch(err => console.log(err));
 };
 
+// Kezdőlap: ugyanazt a terméklistát mutatja.
 exports.getIndex = (req, res, next) => {
   Product.findAll()
     .then(products => {
@@ -42,6 +43,7 @@ exports.getIndex = (req, res, next) => {
     });
 };
 
+// Kosár nézet: a cart.json tartalmát összefésüli a DB-ben lévő termékadatokkal.
 exports.getCart = (req, res, next) => {
   req.user
     .getCart()
@@ -60,6 +62,7 @@ exports.getCart = (req, res, next) => {
     .catch(err => console.log(err));
 };
 
+// Egy termék hozzáadása a kosárhoz, majd visszairányítás.
 exports.postCart = (req, res, next) => {
   const prodId = req.body.productId;
   let fetchedCart;
@@ -81,7 +84,7 @@ exports.postCart = (req, res, next) => {
         newQuantity = oldQuantity + 1;
         return product;
       }
-      return Product.findById(prodId);
+      return Product.findByPk(prodId);
     })
     .then(product => {
       return fetchedCart.addProduct(product, {
@@ -94,6 +97,7 @@ exports.postCart = (req, res, next) => {
     .catch(err => console.log(err));
 };
 
+// Termék eltávolítása a kosárból azonosító alapján, majd irányítás.
 exports.postCartDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
   req.user

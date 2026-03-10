@@ -3,7 +3,6 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// Az alkalmazás központi bekötése: hibakezelő és a konfigurált Sequelize példány.
 const errorController = require('./controllers/error');
 const sequelize = require('./util/database');
 const Product = require('./models/product');
@@ -64,7 +63,6 @@ sequelize
     // A 1. felhasználó lekérése, mert ez a request objektumokban szerepel. A 1. felhasználó lekérése a bejövő kéréséhez használt SQL parancs:
     return User.findByPk(1);
     // console.log(result);
-    app.listen(3000);
   })
   .then(user => {
     // Ha nincs ilyen felhasználó, akkor létrehozunk egy új felhasználót a megadott adatokkal.
@@ -75,7 +73,8 @@ sequelize
   })
   .then(user => {
     // console.log(user);
-    user.createCart(); //minden felhasználóhoz létrehozunk egy kosarat a createCart() metódussal, amit a hasOne kapcsolat hoz létre.
+    // A hasOne kapcsolat által generált createCart() Promise-t visszaadjuk, hogy a lánc várja.
+    return user.createCart();
   })
   .then(() => {
     app.listen(3000);
